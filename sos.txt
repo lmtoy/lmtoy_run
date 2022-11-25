@@ -19,3 +19,7 @@ Summary of Summaries
 2021-S1-MX-5     100635        2       SEQ/Map NGC6946         Salome
 2021-S1-UM-3   * 100558       13       SEQ/Bs  UGCA281         MarkH
 2021-S1-UM-1   * 101712        4       SEQ/Map BKP7323_CO      MarkH
+
+2018-S1-MU-8                   -       SEQ/Map M51             MarkH
+2018-S1-MU-45                  -                               Arturo
+2018-S1-MU-64     92787        -       SEQ/Map Sextans_A       (Bolatto)
