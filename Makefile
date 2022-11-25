@@ -1,8 +1,8 @@
 #   manage the script generators
 
-GIT_DIRS = lmtoy_2018-S1-MU-45 \
-	lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-3 \
-	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-11 lmtoy_2021-S1-UM-3 \
+GIT_DIRS = lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 \
+	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-14 \
+	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3 lmtoy_2021-S1-UM-11 \
 	lmtoy_2021-S1-US-3 \
 	lmtoy_2021S1RSRCommissioning lmtoy_2022S1RSRCommissioning
 
@@ -19,19 +19,19 @@ git:
 	(if [ ! -d $$dir ]; then git clone $(BASE)/$$dir ; fi); done
 
 pull:
-	@echo -n "lmtoy_run: "; git pull
+	@echo -n "### lmtoy_run: "; git pull
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "$$dir: " ;cd $$dir; git pull); done
+	(echo -n "### $$dir: " ;cd $$dir; git pull); done
 	@echo Last pull: `date` >> git.log
 
 status:
-	@echo -n "lmtoy_run: "; git status -uno
+	@echo -n "### lmtoy_run: "; git status -uno
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "$$dir: " ;cd $$dir; git status -uno); done
+	(echo -n "### $$dir: " ;cd $$dir; git status -uno); done
 
 branch:
-	@echo -n "lmtoy_run: "; git branch --show-current
+	@echo -n "### lmtoy_run: "; git branch --show-current
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "$$dir: " ;cd $$dir; git branch --show-current); done
+	(echo -n "### $$dir: " ;cd $$dir; git branch --show-current); done
 
 
