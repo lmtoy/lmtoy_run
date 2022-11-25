@@ -1,0 +1,21 @@
+Summary of Summaries
+====================
+
+# 11 projects so far
+# http://taps.lmtgtm.org/lmtslr/$ProjectId
+# ProjectId     <ObsNum  #good/#tot    mode    object
+
+2022-S1RSRComm...                      RSR     LineCheck       SciOps        
+ 
+2021-S1-MX-26    100441       18       RSR     PG.../IRAS...   Longinotti    
+2021-S1-US-17    100101        5       RSR     J1557+1540      Jiangtao 
+2021-S1-US-19    100474       42       RSR     Cyg_X-1         ?   (continuum)
+2021-S1-MX-34  * 100394       55       RSR     NGP*,G12*       Alfredo
+2021-S1-UM-11  * 100334      135       RSR     J*.*            MinYun
+
+2021-S1-US-3   *  99683       48       SEQ/Map M100            NRAO
+2021-S1-MX-14  * 100628       65       SEQ/Map L1157-B1        Arturo   (birdie)
+2021-S1-MX-3   * 100726      130       SEQ/Map edge-survey     Sanchez
+2021-S1-MX-5     100635        2       SEQ/Map NGC6946         Salome
+2021-S1-UM-3   * 100558       13       SEQ/Bs  UGCA281         MarkH
+2021-S1-UM-1   * 101712        4       SEQ/Map BKP7323_CO      MarkH
