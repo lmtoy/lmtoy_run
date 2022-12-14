@@ -1,4 +1,13 @@
-# LMT run files and Script Generator 
+
+# The LMT Script Generator
+
+The script generator is the infrastructure to help run the LMT SL pipeline. We maintain this in github, so that
+DA's, PI, and pipeline developers can communicate. All useful PI information about the project should be
+maintained in this script generator.   The typical name will be **lmtoy_PID**, where **PID** is the
+project ID, e.g. **lmtoy_2021-S1-US-3**
+
+
+# LMT run files 
 
 An LMT run file is a text file, consisting of the pipeline commands to process
 a series of obsnums. They are typically created by a script generator, and
@@ -10,15 +19,17 @@ typically each *ProjectId* has 4 of these runfiles
 4.  *.run2b - runs subsequent instances of combinations, applying flags etc.
 
 A runfile can be processed (executed) via SLURM, GNU parallel or bash, whichever your system supports. On *Unity*
-we obviously will need to use SLURM.
+we obviously will need to use SLURM, on *lma@umd* the obvious choice if GNU parallel, and even on a multi-core laptop
+this might make sense. The slowest approach of course is *bash*, a pure serial 
 
 ## Preparing
 
-more to come here
+more to come here, ideally we have a script that sets up the script generator for a new project.  This will also be
+handy in case the script generator itself needs new features.
 
 ## Running
 
-A number of steps before you can run
+The following are the suggested steps to maintain your script generator.
 
 1. maintain the **lmtinfo.txt** if new obsnums were added, e.g.
 
@@ -75,6 +86,23 @@ A number of steps before you can run
        bash PID.run1a
        ...
 
+### Wrap-up
+
+Once the data have been processed, a web summary in README.html is created:
+
+     cd $WORK_LMT/PID
+     mk_summary1.sh > README.html
+
+there should be a symlink from the index.html to this file, if not
+
+     ln -s README.html index.html
+
+as well as a symlink to the comments.txt file, again depending on where you
+played the lmtoy_$pid directory:
+
+     ln -s $WORK_LMT/lmt_run/lmtoy_$pid/comments.txt
+     ln -s ../comments.txt
+
 ### Unity cheat list
 
 For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
@@ -117,7 +145,10 @@ and run the pipeline for just that source. Here's an example:
 
 etc.
 
-# Viewing results
+Another tip for stacking is the bootstrap approach, by combining different sets of obsnums,
+even though the S/N will be a bit worse.
+
+## Viewing results
 
 Various ways to view the results:
 
