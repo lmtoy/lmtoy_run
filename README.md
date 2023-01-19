@@ -3,9 +3,10 @@
 
 The script generator is the infrastructure to help run the LMT SL pipeline. We maintain this in github, so that
 DA's, PI, and pipeline developers can communicate. All useful PI information about the project should be
-maintained in this script generator.   The typical name will be **lmtoy_PID**, where **PID** is the
-project ID, e.g. **lmtoy_2021-S1-US-3**
+maintained in this script generator.   The typical name for the repo will be **lmtoy_PID**, where **PID** is the
+project ID, e.g. **lmtoy_2021-S1-US-3**, currently they reside in the teuben account on github, e.g.
 
+      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
 
 # LMT run files 
 
@@ -14,22 +15,25 @@ a series of obsnums. They are typically created by a script generator, and
 typically each *ProjectId* has 4 of these runfiles
 
 1.  *.run1a - runs the first instance of the pipeline on individual obsnums, with minimal flagging
-2.  *.run1b - runs subsequent instances, applying flags etc.
-3.  *.run2a - runs the first instance of the pipeline on obsnum combinations, one for each source/spectral line
+2.  *.run1b - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc.
+3.  *.run2a - runs the first instance of the pipeline on all obsnum combinations, one for each source/spectral line
 4.  *.run2b - runs subsequent instances of combinations, applying flags etc.
 
 A runfile can be processed (executed) via SLURM, GNU parallel or bash, whichever your system supports. On *Unity*
 we obviously will need to use SLURM, on *lma@umd* the obvious choice if GNU parallel, and even on a multi-core laptop
-this might make sense. The slowest approach of course is *bash*, a pure serial 
+this might make sense. The slowest approach of course is *bash*, a pure serial script.
 
 ## Preparing
 
-more to come here, ideally we have a script that sets up the script generator for a new project.  This will also be
-handy in case the script generator itself needs new features.
+Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
+is a manual process.  For the remainder of this document we assume you have the script generator:
+
+      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
+      $ cd lmtoy_2021-S1-US-3
 
 ## Running
 
-The following are the suggested steps to maintain your script generator.
+The following are the suggested steps to maintain your script generator, particular when new obsnums were added:
 
 1. maintain the **lmtinfo.txt** if new obsnums were added, e.g.
 
@@ -37,31 +41,28 @@ The following are the suggested steps to maintain your script generator.
 
 2. add new obsnums to **mk_runs.py** and figure out a good default argument list
 
-    * on[]
-    * pars1[]  - per source if there are > 1 
-    * pars2[]
-
-   If you see **mk_runs** instead of **mk_runs.py**, ignore it, it should
-   have been deleted as they've been deprecated.
+    * on[]     - per source
+    * pars1[]  - per source
+    * pars2[]  - per source
 
 3. add any deviations from the default args can go as a comment in
    **comments.txt**, the human readable comments itself (for the
    obsnum summary web pages) go first, followed by the comment (#)
-   symbol, followed by special arguments, e.g.
+   symbol, followed by special SLpipeline.sh arguments, e.g.
 
        99081  partial map     # pix_list=1,2,3,6,7,8,12,13,14,15
 
-4. run ./mk_runs.py - this will have created a run1a and run1b file
-   to process all individual obsnums, as well as run2a and run2b file
+4. run ./mk_runs.py - this will have created a *run1a* and *run1b* file
+   to process all individual obsnums, as well as *run2a* and *run2b* file
    to run all combinations (e.g. if there are more than one source
    and/or multiple frequency setups, e.g. CO and HCN for M51).
 
-   We use two runfile in order to always show the first pipeline run
-   (restart=1) as well as any improvements.
+   We use two runfiles in order to always show the first pipeline run
+   (restart=1) as well as any improvements. 
 
 5. Now you can execute the run files, in the correct order. Depending on what
    machine you are, the execution command that acts on these files is
-   different. The four files are
+   different. Lets say the four files are
 
        PID.run1a
        PID.run1b
@@ -86,6 +87,10 @@ The following are the suggested steps to maintain your script generator.
        bash PID.run1a
        ...
 
+   The latter two can be given at the same time, whereas currently the SLURM method
+   will need to be manually monitored to ensure all pipelines finished, before the
+   next runfile can be given.
+
 ### Wrap-up
 
 Once the data have been processed, a web summary in README.html is created:
@@ -93,7 +98,7 @@ Once the data have been processed, a web summary in README.html is created:
      cd $WORK_LMT/PID
      mk_summary1.sh > README.html
 
-there should be a symlink from the index.html to this file, if not
+there should be a symlink from the index.html to this file, if not, do this:
 
      ln -s README.html index.html
 
@@ -121,13 +126,13 @@ For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
       # submit to SLURM, each time wait until that runfile has been processed
       sbatch_lmtoy.sh $pid.run1a
       squeue -u lmtslr_umass_edu
-      
+      ...
       sbatch_lmtoy.sh $pid.run1b
       squeue -u lmtslr_umass_edu
-
+      ...
       sbatch_lmtoy.sh $pid.run2a
       squeue -u lmtslr_umass_edu
-
+      ...
       sbatch_lmtoy.sh $pid.run2b
       squeue -u lmtslr_umass_edu
 
@@ -155,7 +160,7 @@ Various ways to view the results:
 1. terminal: the directory $WORK_LMT/$PID/$OBSNUM contains all processed data. Use any
    file browser.
 
-2. web: On unity results are password protected on
+2. web: On unity results are password protected and visible via this URL:
    https://taps.lmtgtm.org/lmtslr/$PID
 
 2. download: the ${OBSNUM}_SRDP.tar file linked in the $WORK_LMT/$PID/$OBSNUM/README.html
