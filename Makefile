@@ -1,6 +1,7 @@
 #   manage the script generators
 
-GIT_DIRS = lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-66 \
+GIT_DIRS = lmtoy_2014AYUNM044 \
+        lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-66 \
 	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-14 \
 	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3 lmtoy_2021-S1-UM-11 \
 	lmtoy_2021-S1-US-3 \
