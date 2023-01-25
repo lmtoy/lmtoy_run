@@ -193,3 +193,11 @@ Various ways to view the results:
 2. download: the ${OBSNUM}_SRDP.tar file linked in the $WORK_LMT/$PID/$OBSNUM/README.html
    file contains all data for perhaps easier viewing on your own laptop The pipeline cannot
    run on this data though.
+
+## github
+
+The script generator is currently maintained under github. We have not discussed how to
+maintain them between DA's and PI. The two competing models are the "trusted collaborator"
+model, as the "pull request from a collaborator branch". A somewhat long explanation is in
+https://github.com/teuben/nemo/blob/master/CONTRIBUTING.md, though we should make our own
+here.
