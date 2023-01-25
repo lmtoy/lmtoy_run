@@ -2,8 +2,10 @@
 # The LMT Script Generator
 
 The script generator is the infrastructure to help run the LMT SL pipeline. We maintain this in github, so that
-DA's, PI, and pipeline developers can communicate. All useful PI information about the project should be
-maintained in this script generator.   The typical name for the repo will be **lmtoy_PID**, where **PID** is the
+DA's, PI, and pipeline developers can communicate and agree on a good pipeline run.
+All useful PI information about the project should be
+maintained in this script generator directory.
+The typical name for the repo will be **lmtoy_PID**, where **PID** is the
 project ID, e.g. **lmtoy_2021-S1-US-3**, currently they reside in the teuben account on github, e.g.
 
       $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
@@ -35,9 +37,9 @@ is a manual process.  For the remainder of this document we assume you have the 
 
 The following are the suggested steps to maintain your script generator, particular when new obsnums were added:
 
-1. maintain the **lmtinfo.txt** if new obsnums were added, e.g.
+1. maintain the **lmtinfo.txt** where we keep all the obsnums used in this project
 
-    lmtinfo.py grep PID > lmtinfo.txt
+    $ lmtinfo.py grep PID > lmtinfo.txt
 
 2. add new obsnums to **mk_runs.py** and figure out a good default argument list
 
@@ -73,18 +75,21 @@ The following are the suggested steps to maintain your script generator, particu
 
    On unity the command would be
 
-       sbatch_lmtoy.sh PID.run1a
+       $ sbatch_lmtoy.sh PID.run1a
        ...
+
+   but this is an example where you need to wait for each to complete. 
+
 
    On a machine with gnu parallel (even multicore laptops can benefit from this)
 
-       parallel --jobs 4 < PID.run1a
+       $ parallel --jobs 4 < PID.run1a
        ...
 
    On a machines with single core, bash will do just fine, in fact, here
    you can submit all four since they operate serially
 
-       bash PID.run1a
+       $ bash PID.run1a
        ...
 
    The latter two can be given at the same time, whereas currently the SLURM method
@@ -112,56 +117,79 @@ played the lmtoy_$pid directory:
 
 For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
 
-      # set the ProjectId
-      pid=2021-S1-MX-3
+      # ensure all the script generators are up to date
+      cd $WORK_LMT      
+      git clone https://github.com/teuben/lmtoy_run
+      cd lmtoy_run
+      make git
 
-      # pick one of these directories, whichever you implemented
-      cd $WORK_LMT/lmt_run/lmtoy_$pid
-      cd $WORK_LMT/$pid/lmtoy_$pid
+      # set the ProjectId
+      $ pid=2021-S1-MX-3
+      
+      $ cd $WORK_LMT/$pid
+
+      # make sure you have symlinks here (only needed once)
+      ln -s $WORK_LMT/lmt_run/lmtoy_$pid
+      ln -s lmtoy_$pid/comments.txt
+      ln -s README.html index.html
+
+      $ cd lmtoy_$pid
 
       # update if need be, and make updated run files
-      git pull
-      ./mk_runs.py
+      $ git pull
+      $ ./mk_runs.py
       
       # submit to SLURM, each time wait until that runfile has been processed
-      sbatch_lmtoy.sh $pid.run1a
-      squeue -u lmtslr_umass_edu
-      ...
-      sbatch_lmtoy.sh $pid.run1b
-      squeue -u lmtslr_umass_edu
-      ...
-      sbatch_lmtoy.sh $pid.run2a
-      squeue -u lmtslr_umass_edu
-      ...
-      sbatch_lmtoy.sh $pid.run2b
-      squeue -u lmtslr_umass_edu
+      $ sbatch_lmtoy.sh $pid.run1a
+      $ squeue -u lmtslr_umass_edu
+      ...<wait>
+      
+      $ sbatch_lmtoy.sh $pid.run1b
+      $ squeue -u lmtslr_umass_edu
+      ...<wait>
+      
+      $ sbatch_lmtoy.sh $pid.run2a
+      $ squeue -u lmtslr_umass_edu
+      ...<wait>
 
-SLURM logfiles and runfiles are in:   $WORK_LMT/sbatch - occasionally this directory
+      $ sbatch_lmtoy.sh $pid.run2b
+      $ squeue -u lmtslr_umass_edu
+
+after the runs are all done, and assuming comments.txt was symlinked, you can do
+
+      # make summary
+
+SLURM logfiles and runfiles are in:   **$WORK_LMT/sbatch** - occasionally this directory
 should be cleaned of old files, e.g. to remove files older than 3 months:
 
-      find $WORK_LMT/sbatch -type f -mtime +90 -delete 
+      $ find $WORK_LMT/sbatch -type f -mtime +90 -delete 
 
 A tip for a project with many sources: the sourcename is tagged in the run file via
-the _s= keyword, so for each of the (four) runfiles you can grep out that source name
+the **_s=** keyword, so for each of the (four) runfiles you can grep out that source name
 and run the pipeline for just that source. Here's an example:
 
-       grep Arp143 2021-S1-MX-3.run1a > test.run1a
-       sbatch_lmtoy.sh test.run1a
+       $ grep Arp143 2021-S1-MX-3.run1a > test.run1a
+       $ sbatch_lmtoy.sh test.run1a
 
 etc.
-
-Another tip for stacking is the bootstrap approach, by combining different sets of obsnums,
-even though the S/N will be a bit worse.
 
 ## Viewing results
 
 Various ways to view the results:
 
 1. terminal: the directory $WORK_LMT/$PID/$OBSNUM contains all processed data. Use any
-   file browser.
+   file browser, e.g.
 
-2. web: On unity results are password protected and visible via this URL:
-   https://taps.lmtgtm.org/lmtslr/$PID
+       $ xdg-open $WORK_LMT/$PID/$OBSNUM
+
+2. web: On Unity results are password protected and visible via this URL:
+
+       https://taps.lmtgtm.org/lmtslr/$PID
+       
+   or if you are a helpdesk $USER
+   
+       https://taps.lmtgtm.org/lmthelpdesk/$USER/$PID
 
 2. download: the ${OBSNUM}_SRDP.tar file linked in the $WORK_LMT/$PID/$OBSNUM/README.html
-   file contains all data for perhaps easier viewing on your own laptop.
+   file contains all data for perhaps easier viewing on your own laptop The pipeline cannot
+   run on this data though.
