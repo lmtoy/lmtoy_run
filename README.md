@@ -208,17 +208,32 @@ here.
 Summary of steps to get the data end-to-end  (this is the current workflow, drafted as such,
 and will likely change):
 
-1. malt: Run **SLpipeline_run.sh** on malt. This will make TAP files, and copies them to Unity.
+1. lmtc: the data are magically taken, and rsync'd to malt. This is where the pipeline
+   work starts. Of course a lot of work precedes this step:  phase-1, phase-2, observing
+   scripts, etc.
 
-2. any: Collect the (new) PID/OBSNUM, and make a script generator, or update its OBSNUM's. - if
-   this is a new PID, the PI should be emailed data is coming, and give them the URL
+2. malt: Run **SLpipeline_run.sh** on malt. This will watch for new data to appear,
+   run pipeline and make TAP files, and copies these to Unity. If somebody is awake on
+   malt, a webbrowser can be run locally for viewing, and some combination work is sometimes
+   tested already.
 
-3. unity: Run **../do_untap *.tar** in each $WORK_LMT/PID, this will make them available to PI
+3. any: Collect the (new) PID/OBSNUM, and make a script generator, or update its OBSNUM's. - if
+   this is a new PID, the PI should be emailed data is coming, and give them the unity URL
 
-4. unity: wait for raw data to arrive, ideally run **lmtinfo.py build** to get a new database.
+4. unity: Run **../do_untap *.tar** in each $WORK_LMT/PID, this will make them available to PI
 
-5. unity: either DA or PT:  via the script generator run the pipeline, for PI to view. Ideally
+5. unity: wait for raw data to arrive, ideally run **lmtinfo.py build** to get a new database.
+
+6. unity: either DA or PT:  via the script generator run the pipeline, for PI to view. Ideally
    the DA will run it first, potentially flag data the pipeline didnt see.
 
-6. unity: ingest in dataverse [not implemented yet]
+7. unity: ingest in dataverse [not implemented yet]
    
+
+Timeline:
+
+     1-4: ~T+1 hour
+     5:   ~T+1 day
+     6:   ~T+1 week
+     7:   ?
+
