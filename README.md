@@ -201,3 +201,24 @@ maintain them between DA's and PI. The two competing models are the "trusted col
 model, as the "pull request from a collaborator branch". A somewhat long explanation is in
 https://github.com/teuben/nemo/blob/master/CONTRIBUTING.md, though we should make our own
 here.
+
+
+# Workflow
+
+Summary of steps to get the data end-to-end  (this is the current workflow, drafted as such,
+and will likely change):
+
+1. malt: Run **SLpipeline_run.sh** on malt. This will make TAP files, and copies them to Unity.
+
+2. any: Collect the (new) PID/OBSNUM, and make a script generator, or update its OBSNUM's. - if
+   this is a new PID, the PI should be emailed data is coming, and give them the URL
+
+3. unity: Run **../do_untap *.tar** in each $WORK_LMT/PID, this will make them available to PI
+
+4. unity: wait for raw data to arrive, ideally run **lmtinfo.py build** to get a new database.
+
+5. unity: either DA or PT:  via the script generator run the pipeline, for PI to view. Ideally
+   the DA will run it first, potentially flag data the pipeline didnt see.
+
+6. unity: ingest in dataverse [not implemented yet]
+   
