@@ -4,7 +4,10 @@ Summary of Summaries
 # http://taps.lmtgtm.org/lmtslr/$ProjectId
 # ProjectId      ? <ObsNum  #good/#tot    mode    object
 
-2022-S1RSRComm...                      RSR     LineCheck       SciOps        
+2022-S1RSRComm...                      RSR     LineCheck       SciOps
+
+2023-S1-MX-46     * 104106        ?       RSR     G09-44907       ?arturo?
+2023-S1-US-18     *                       RSR     HZ04            ?
  
 2021-S1-MX-26       100441       18       RSR     PG.../IRAS...   Longinotti    
 2021-S1-US-17       100101        5       RSR     J1557+1540      Jiangtao 
