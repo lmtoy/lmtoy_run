@@ -22,8 +22,8 @@ typically each *ProjectId* has 4 of these runfiles
 4.  *.run2b - runs subsequent instances of combinations, applying flags etc.
 
 A runfile can be processed (executed) via SLURM, GNU parallel or bash, whichever your system supports. On *Unity*
-we obviously will need to use SLURM, on *lma@umd* the obvious choice if GNU parallel, and even on a multi-core laptop
-this might make sense. The slowest approach of course is *bash*, a pure serial script.
+we obviously will need to use SLURM, on *lma@umd* and *malt* the obvious choice is GNU parallel, and even on a multi-core laptop
+this might make sense. The slowest approach of course is *bash*, as a pure serial script.
 
 ## Preparing
 
