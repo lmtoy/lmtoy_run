@@ -36,4 +36,7 @@ branch:
 	-@for dir in $(GIT_DIRS); do\
 	(echo -n "### $$dir: " ;cd $$dir; git branch --show-current); done
 
+runs:
+	-@for dir in $(GIT_DIRS); do\
+	(cd $$dir; make runs); done
 
