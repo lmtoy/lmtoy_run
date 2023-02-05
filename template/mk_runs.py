@@ -11,8 +11,8 @@ import sys
 # in prep of the new lmtoy module
 try:
     lmtoy = os.environ['LMTOY']
-    sys.path.append(lmtoy + '/lmtoy')
-    import runs
+    sys.path.append(lmtoy)
+    from lmtoy import runs
 except:
     print("No LMTOY with runs.py")
     sys.exit(0)
