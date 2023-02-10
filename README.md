@@ -25,6 +25,17 @@ A runfile can be processed (executed) via SLURM, GNU parallel or bash, whichever
 we obviously will need to use SLURM, on *lma@umd* and *malt* the obvious choice is GNU parallel, and even on a multi-core laptop
 this might make sense. The slowest approach of course is *bash*, as a pure serial script.
 
+## Setup
+
+Using github CLI is probably the easiest to explain how to bootstrap the script generator (as teuben). We do this in the lmtoy_run
+directory, since it's simpler to maintain all script generators below there
+
+     $ cd lmtoy_run
+     $ gh repo create --public lmtoy_2023-S1-MX-47
+     $ gh repo clone lmtoy_2023-S1-MX-47
+     $ cd lmtoy_2023-S1-MX-47
+     $ cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
+
 ## Preparing
 
 Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
