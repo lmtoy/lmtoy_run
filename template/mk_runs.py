@@ -32,4 +32,5 @@ pars1['']   = ""
 pars2 = {}
 pars2['']   = "srdp=1 admit=0"
 
-runs.mk_runs(project, on, pars1, pars2)
+if __name__ == '__main__':    
+    runs.mk_runs(project, on, pars1, pars2)
