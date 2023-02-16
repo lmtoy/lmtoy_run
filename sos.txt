@@ -14,7 +14,7 @@ Summary of Summaries
 2021-S1-MX-26       100441       18       RSR     PG.../IRAS...   Longinotti    
 2021-S1-US-17       100101        5       RSR     J1557+1540      Jiangtao 
 2021-S1-US-19       100474       42       RSR     Cyg_X-1         ?   (continuum)
-2021-S1-MX-34       100394       55       RSR     NGP*,G12*       =Alfredo
+2021-S1-MX-34     * 100394       55       RSR     NGP*,G12*       =Alfredo
 2021-S1-UM-11     * 100334      135       RSR     J*.*            =MinYun
 
 2021-S1-US-3      *  99683       48       SEQ/Map M100            NRAO
