@@ -1,7 +1,7 @@
 #
 
 
-PID  = 2023-S1-US-18
+include PID
 
 help:
 	@echo PID=$(PID)
@@ -20,3 +20,7 @@ summary:
 	@for p in $(PID); do \
 	(echo $$p;  cd $(WORK_LMT)/$$p; mk_summary1.sh > README.html); \
 	done
+
+q:
+	squeue -u lmtslr_umass_edu | awk '{print NR-1,$$0}'
+
