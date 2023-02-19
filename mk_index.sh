@@ -17,6 +17,7 @@ for dir in $*; do
 	echo -n " $last "  >> $h
 	r=$wdir/$last/README.html
 	if [ -e $r ]; then
+	    # publish obs_date and red_date
 	    echo "$(tail -1 $r | cut -c 10-37)" >> $h
 	else
 	    echo " - " >> $h
