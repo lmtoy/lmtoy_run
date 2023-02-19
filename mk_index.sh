@@ -12,6 +12,9 @@ echo "    <th>"
 echo "      ProjectID"
 echo "    </th>"
 echo "    <th>"
+echo "      Nobsnums"
+echo "    </th>"
+echo "    <th>"
 echo "      first_Obsnum"
 echo "    </th>"
 echo "    <th>"
@@ -38,16 +41,22 @@ for dir in $*; do
     if [ -d $wdir ]; then
 	on0=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
 	on1=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
+	n=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | wc -l)
 	r=$wdir/$on1/README.html
 	date=""
 	date_obs=""
 	source $wdir/$on1/lmtoy_${on1}.rc
     else
+	n=""
 	on0=""
 	on1=""
 	date=""
 	date_obs=""	
     fi
+    echo "    <td>"
+    echo "      $n"
+    echo "    </td>"
+    
     echo "    <td>"
     echo "      $on0"
     echo "    </td>"
