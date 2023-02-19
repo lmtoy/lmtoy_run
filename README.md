@@ -1,48 +1,97 @@
 
 # The LMT Script Generator
 
-The script generator is the infrastructure to help run the LMT SL pipeline. We maintain this in github, so that
-DA's, PI, and pipeline developers can communicate and agree on a good pipeline run.
-All useful PI information about the project should be
-maintained in this script generator directory.
-The typical name for the repo will be **lmtoy_PID**, where **PID** is the
-project ID, e.g. **lmtoy_2021-S1-US-3**, currently they reside in the teuben account on github, e.g.
+The script generator is the infrastructure to help run the LMT
+SLpipeline. We maintain this in github, so that DA's, PI, and pipeline
+developers can communicate and agree on a good pipeline run.  All
+useful PI information about the project should be maintained in this
+script generator directory.  The typical name for the repo will be
+**lmtoy_PID**, where **PID** is the project ID,
+e.g. **lmtoy_2021-S1-US-3**, currently they reside in the teuben
+account on github, viz.
 
       $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
 
-# LMT run files 
+but soon this will be
 
-An LMT run file is a text file, consisting of the pipeline commands to process
-a series of obsnums. They are typically created by a script generator, and
-typically each *ProjectId* has 4 of these runfiles
+      $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
+
+## Directories and Files 
+
+Important directories to remember:
+
+    $DATA_LMT                         root directory of LMT (read-only) raw data
+    $WORK_LMT                         root directory of your LMT pipeline results
+    $WORK_LMT/$PID                    root directory of your LMT pipeline results for this PID
+    $WORK_LMT/lmtoy_run/lmtoy_$PID    script generator for this PID
+
+The script generator has the following files:
+
+    README          useful info for the PI
+    Makefile        helper file for your workflow
+    PID             small text file what the PID is, the Makefile needs it
+    mk_runs.py      [required] produces the run files
+    comments.txt    [required] comments and directives for individual obsnums
+    lmtinfo.txt     output from lmtinfo.py for this PID
+
+
+## LMT run files 
+
+An LMT run file is a text file, consisting of the pipeline commands to
+process a series of obsnums. They are typically created by a script
+generatorm (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
 
 1.  *.run1a - runs the first instance of the pipeline on individual obsnums, with minimal flagging
 2.  *.run1b - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc.
 3.  *.run2a - runs the first instance of the pipeline on all obsnum combinations, one for each source/spectral line
 4.  *.run2b - runs subsequent instances of combinations, applying flags etc.
 
-A runfile can be processed (executed) via SLURM, GNU parallel or bash, whichever your system supports. On *Unity*
-we obviously will need to use SLURM, on *lma@umd* and *malt* the obvious choice is GNU parallel, and even on a multi-core laptop
-this might make sense. The slowest approach of course is *bash*, as a pure serial script.
+A runfile can be processed (executed) via SLURM, GNU parallel or bash,
+whichever your system supports. On *Unity* we obviously will need to
+use SLURM, on *lma@umd* and *malt* the obvious choice is GNU parallel,
+and even on a multi-core laptop this might make sense. The slowest
+approach of course is *bash*, as a pure serial script, in case you care
+of spending the least amount of CPU and can afford to wait. Examples of use:
+
+
+    sbatch_lmtoy.sh  test1.run           # SLURM on Unity
+    parallel  -j 4 < test1.run           # GNU parallel
+    bash             test1.run           # classic serial shell processing
 
 ## Setup
 
-Using github CLI is probably the easiest to explain how to bootstrap the script generator (as teuben). We do this in the lmtoy_run
-directory, since it's simpler to maintain all script generators below there
+Using github CLI (the **gh** command) is probably the easiest to
+explain how to bootstrap the script generator. We do this
+in the lmtoy_run directory, since it's simpler to maintain all script
+generators below there. We keep a record of all projects in the Makefile
+in lmtoy_run:
 
+     $ PID=2023-S1-MX-47
      $ cd lmtoy_run
-     $ gh repo create --public lmtoy_2023-S1-MX-47
-     $ gh repo clone lmtoy_2023-S1-MX-47
-     $ cd lmtoy_2023-S1-MX-47
+     $ gh repo create --public lmtoy_$PID
+     $ gh repo clone lmtoy_$PID
+     $ cd lmtoy_$PID
      $ cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
+     $ echo "PID=\"$PID\"" > PID
+     ...
+     $ git push
+
 
 ## Preparing
 
 Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
 is a manual process.  For the remainder of this document we assume you have the script generator:
 
-      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
+      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3    #old
+      $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3     #soon
       $ cd lmtoy_2021-S1-US-3
+
+On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can generate the **mk_runs.py** file:
+
+      $ source_obsnum.sh 2021-S1-US-3 > test1.py
+      $ diff test1.py mk_runs.py
+
+it will be a manual process to align these two files (for now).
 
 ## Running
 
@@ -58,12 +107,15 @@ The following are the suggested steps to maintain your script generator, particu
     * pars1[]  - per source
     * pars2[]  - per source
 
+   again, the **source_obsnum.sh** script can help you maintain these list.
+
 3. add any deviations from the default args can go as a comment in
    **comments.txt**, the human readable comments itself (for the
    obsnum summary web pages) go first, followed by the comment (#)
    symbol, followed by special SLpipeline.sh arguments, e.g.
 
-       99081  partial map     # pix_list=1,2,3,6,7,8,12,13,14,15
+       99081  partial map              # pix_list=1,2,3,6,7,8,12,13,14,15
+       99082  full map, one bad beam   # pix_list=-0
 
 4. run ./mk_runs.py - this will have created a *run1a* and *run1b* file
    to process all individual obsnums, as well as *run2a* and *run2b* file
@@ -128,42 +180,36 @@ played the lmtoy_$pid directory:
 
 For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
 
-      # ensure all the script generators are up to date
-      cd $WORK_LMT      
-      git clone https://github.com/teuben/lmtoy_run
-      cd lmtoy_run
-      make git
-
       # set the ProjectId
-      $ pid=2021-S1-MX-3
-      
-      $ cd $WORK_LMT/$pid
+      $ PID=2021-S1-MX-3
+
+      $ cd $WORK_LMT/$PID
 
       # make sure you have symlinks here (only needed once)
-      ln -s $WORK_LMT/lmt_run/lmtoy_$pid
-      ln -s lmtoy_$pid/comments.txt
+      ln -s $WORK_LMT/lmt_run/lmtoy_$PID
+      ln -s lmtoy_$PID/comments.txt
       ln -s README.html index.html
 
-      $ cd lmtoy_$pid
 
-      # update if need be, and make updated run files
-      $ git pull
-      $ ./mk_runs.py
-      
+      # ensure all the script generator is up to date
+      cd $WORK_LMT/lmtoy_run/lmtoy_$PID
+      git pull
+      make runs
+
       # submit to SLURM, each time wait until that runfile has been processed
-      $ sbatch_lmtoy.sh $pid.run1a
+      $ sbatch_lmtoy.sh $PID.run1a
       $ squeue -u lmtslr_umass_edu
       ...<wait>
       
-      $ sbatch_lmtoy.sh $pid.run1b
+      $ sbatch_lmtoy.sh $PID.run1b
       $ squeue -u lmtslr_umass_edu
       ...<wait>
       
-      $ sbatch_lmtoy.sh $pid.run2a
+      $ sbatch_lmtoy.sh $PID.run2a
       $ squeue -u lmtslr_umass_edu
       ...<wait>
 
-      $ sbatch_lmtoy.sh $pid.run2b
+      $ sbatch_lmtoy.sh $PID.run2b
       $ squeue -u lmtslr_umass_edu
 
 after the runs are all done, and assuming comments.txt was symlinked, you can do
@@ -179,8 +225,8 @@ A tip for a project with many sources: the sourcename is tagged in the run file 
 the **_s=** keyword, so for each of the (four) runfiles you can grep out that source name
 and run the pipeline for just that source. Here's an example:
 
-       $ grep Arp143 2021-S1-MX-3.run1a > test.run1a
-       $ sbatch_lmtoy.sh test.run1a
+       $ grep Arp143 2021-S1-MX-3.run1a > test1
+       $ sbatch_lmtoy.sh test1
 
 etc.
 
