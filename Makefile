@@ -44,3 +44,10 @@ runs:
 	-@for dir in $(GIT_DIRS); do\
 	(cd $$dir; make runs); done
 
+TAPS = http://taps.lmtgtm.org/lmtslr
+index:
+	echo "<H1> LMT projects </H1>" > index.html
+	echo "<UL>"                  >> index.html
+	-@for dir in $(GIT_DIRS); do\
+	(d=`echo $$dir|sed s/lmtoy_//`; echo -n "<LI> <A HREF=$(TAPS)/$$d> $$d</A> " >> index.html ); done
+	echo "</UL>"                 >> index.html
