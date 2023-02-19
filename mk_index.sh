@@ -14,7 +14,13 @@ for dir in $*; do
     wdir=$WORK_LMT/$pid
     if [ -d $wdir ]; then
 	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
-	echo " $last "  >> $h
+	echo -n " $last "  >> $h
+	r=$wdir/$last/README.html
+	if [ -e $r ]; then
+	    echo "$(tail -1 $r | cut -c 10-37)" >> $h
+	else
+	    echo " - " >> $h
+	fi
     else
 	echo " - "  >> $h
     fi
