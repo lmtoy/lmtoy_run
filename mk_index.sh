@@ -15,7 +15,7 @@ echo "    <th>"
 echo "      last_Obsnum"
 echo "    </th>"
 echo "    <th>"
-echo "      last_Obsnum_date"
+echo "      last_pipeline_date"
 echo "    </th>"
 echo "  </tr>"
 
