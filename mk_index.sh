@@ -25,7 +25,7 @@ for dir in $*; do
     
     echo '  <tr class="item">'
     echo "    <td>"
-    echo "    <LI> <A HREF=$taps/$pid> $pid</A>"
+    echo "      <A HREF=$taps/$pid> $pid</A>"
     echo "    </td>"
 
 
