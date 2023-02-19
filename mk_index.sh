@@ -5,7 +5,7 @@ taps=http://taps.lmtgtm.org/lmtslr
 
 echo "<html>"
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
-echo "Index created $(date)"
+echo "Index created $(date) (click on column name to sort by that column)
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
@@ -30,7 +30,7 @@ for dir in $*; do
 
 
     if [ -d $wdir ]; then
-	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
+	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
 	r=$wdir/$last/README.html
 	if [ -e $r ]; then
 	    # publish obs_date and red_date
