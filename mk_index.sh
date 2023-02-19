@@ -22,10 +22,10 @@ echo "    <th>"
 echo "      last_Obsnum"
 echo "    </th>"
 echo "    <th>"
-echo "      last_pipeline_date"
+echo "      last_date_obs"
 echo "    </th>"
 echo "    <th>"
-echo "      last_date_obs"
+echo "      last_pipeline_date"
 echo "    </th>"
 echo "  </tr>"
 
@@ -67,11 +67,11 @@ for dir in $*; do
     echo "    </td>"
     
     echo "    <td>"
-    echo "      $date"
+    echo "      $date_obs"
     echo "    </td>"
     
     echo "    <td>"
-    echo "      $date_obs"
+    echo "      $date"
     echo "    </td>"
 
     echo "  </tr>"
