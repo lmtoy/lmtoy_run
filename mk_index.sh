@@ -4,6 +4,7 @@
 taps=http://taps.lmtgtm.org/lmtslr
 
 echo "<html>"
+echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
 echo "Index created $(date) (click on column name to sort by that column)"
 echo '<table border=1 class="sortable">'
@@ -24,7 +25,7 @@ echo "    <th>"
 echo "      last_pipeline_date"
 echo "    </th>"
 echo "    <th>"
-echo "      date_obs"
+echo "      last_date_obs"
 echo "    </th>"
 echo "  </tr>"
 
