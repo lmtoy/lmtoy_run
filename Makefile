@@ -46,9 +46,4 @@ runs:
 
 TAPS = http://taps.lmtgtm.org/lmtslr
 index:
-	echo "<H1> LMT projects </H1>" > index.html
-	echo "Index created `date`"   >> index.html
-	echo "<UL>"                   >> index.html
-	-@for dir in $(GIT_DIRS); do\
-	(d=`echo $$dir|sed s/lmtoy_//`; echo -n "<LI> <A HREF=$(TAPS)/$$d> $$d</A> " >> index.html ); done
-	echo "</UL>"                  >> index.html
+	./mk_index.sh $(GIT_DIRS)
