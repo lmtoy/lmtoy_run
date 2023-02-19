@@ -14,10 +14,9 @@ for dir in $*; do
     wdir=$WORK_LMT/$pid
     if [ -d $wdir ]; then
 	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
-	echo $last
-	echo " yes $last "  >> $h
+	echo " $last "  >> $h
     else
-	echo " no "  >> $h
+	echo " - "  >> $h
     fi
 done
 echo "</UL>"                  >> $h
