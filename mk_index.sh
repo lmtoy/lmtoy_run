@@ -5,7 +5,7 @@ taps=http://taps.lmtgtm.org/lmtslr
 
 echo "<html>"
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
-echo "Index created $(date) (click on column name to sort by that column)
+echo "Index created $(date) (click on column name to sort by that column)"
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
