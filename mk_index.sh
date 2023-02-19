@@ -1,30 +1,56 @@
 #! /usr/bin/env bash
 #
 
-
-h=index.html
 taps=http://taps.lmtgtm.org/lmtslr
 
-echo "<H1> LMT projects </H1>" > $h
-echo "Index created $(date)"   >> $h
-echo "<UL>"                    >> $h
+echo "<html>"
+echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
+echo "Index created $(date)"
+echo '<table border=1 class="sortable">'
+echo '  <tr class="item">'
+echo "    <th>"
+echo "      ProjectID"
+echo "    </th>"
+echo "    <th>"
+echo "      last_Obsnum"
+echo "    </th>"
+echo "    <th>"
+echo "      last_Obsnum_date"
+echo "    </th>"
+echo "  </tr>"
+
 for dir in $*; do
     pid=$(echo $dir|sed s/lmtoy_//)
-    echo -n "<LI> <A HREF=$taps/$pid> $pid</A>" >> $h
     wdir=$WORK_LMT/$pid
+    
+    echo '  <tr class="item">'
+    echo "    <td>"
+    echo "    <LI> <A HREF=$taps/$pid> $pid</A>"
+    echo "    </td>"
+
+
     if [ -d $wdir ]; then
 	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
-	echo -n " $last "  >> $h
 	r=$wdir/$last/README.html
 	if [ -e $r ]; then
 	    # publish obs_date and red_date
-	    echo "$(tail -1 $r | cut -c 10-37)" >> $h
+	    date="$(tail -1 $r | cut -c 10-37)" 
 	else
-	    echo " - " >> $h
+	    date=""
 	fi
     else
-	echo " - "  >> $h
+	last=""
+	date=""
     fi
-done
-echo "</UL>"                  >> $h
+    echo "    <td>"
+    echo "      $last"
+    echo "    </td>"
+    
+    echo "    <td>"
+    echo "      $date"
+    echo "    </td>"
 
+    echo "  </tr>"
+done
+echo "</table>"
+echo "Last written on:  $(date)"

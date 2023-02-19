@@ -46,4 +46,4 @@ runs:
 
 TAPS = http://taps.lmtgtm.org/lmtslr
 index:
-	./mk_index.sh $(GIT_DIRS)
+	@./mk_index.sh $(GIT_DIRS) > index.html
