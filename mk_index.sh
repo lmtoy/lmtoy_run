@@ -12,10 +12,16 @@ echo "    <th>"
 echo "      ProjectID"
 echo "    </th>"
 echo "    <th>"
+echo "      first_Obsnum"
+echo "    </th>"
+echo "    <th>"
 echo "      last_Obsnum"
 echo "    </th>"
 echo "    <th>"
 echo "      last_pipeline_date"
+echo "    </th>"
+echo "    <th>"
+echo "      date_obs"
 echo "    </th>"
 echo "  </tr>"
 
@@ -30,24 +36,32 @@ for dir in $*; do
 
 
     if [ -d $wdir ]; then
-	last=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
-	r=$wdir/$last/README.html
-	if [ -e $r ]; then
-	    # publish obs_date and red_date
-	    date="$(tail -1 $r | cut -c 10-37)" 
-	else
-	    date=""
-	fi
-    else
-	last=""
+	on0=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
+	on1=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
+	r=$wdir/$on1/README.html
 	date=""
+	date_obs=""
+	source $wdir/$on1/lmtoy_${on1}.rc
+    else
+	on0=""
+	on1=""
+	date=""
+	date_obs=""	
     fi
     echo "    <td>"
-    echo "      $last"
+    echo "      $on0"
+    echo "    </td>"
+    
+    echo "    <td>"
+    echo "      $on1"
     echo "    </td>"
     
     echo "    <td>"
     echo "      $date"
+    echo "    </td>"
+    
+    echo "    <td>"
+    echo "      $date_obs"
     echo "    </td>"
 
     echo "  </tr>"
