@@ -13,7 +13,7 @@ GIT_DIRS = lmtoy_2014AYUNM044 \
 	lmtoy_2023-S1-US-8  lmtoy_2023-S1-US-18
 
 
-.PHONY:  help install build
+.PHONY:  help install build status pull
 
 BASE = https://github.com/teuben
 
@@ -33,7 +33,7 @@ pull:
 status:
 	@echo -n "### lmtoy_run: "; git status -uno
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "### $$dir: " ;cd $$dir; git status -uno); done
+	(echo "### $$dir: " ;cd $$dir; git status -suno); done
 
 branch:
 	@echo -n "### lmtoy_run: "; git branch --show-current
