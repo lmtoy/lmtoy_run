@@ -1,24 +1,18 @@
-
 # The LMT Script Generator
 
 The script generator is the infrastructure to help run the LMT
 SLpipeline. We maintain this in github, so that DA's, PI, and pipeline
-developers can communicate and agree on a good pipeline run.  All
-useful PI information about the project should be maintained in this
-script generator directory.  The typical name for the repo will be
-**lmtoy_PID**, where **PID** is the project ID,
-e.g. **lmtoy_2021-S1-US-3**, currently they reside in the teuben
-account on github, viz.
-
-      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3
-
-but soon this will be
+developers can communicate and agree on the best possible pipeline
+run.  All useful PI information about the project should be maintained
+in this script generator directory.  The typical name for the repo
+will be **lmtoy_PID**, where **PID** is the project ID,
+e.g. **lmtoy_2021-S1-US-3**, can can be retrieved on github, viz.
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
 ## Directories and Files 
 
-Important directories to remember:
+Important directories to remember in the LMTOY environment:
 
     $DATA_LMT                         root directory of LMT (read-only) raw data
     $WORK_LMT                         root directory of your LMT pipeline results
@@ -27,13 +21,12 @@ Important directories to remember:
 
 The script generator has the following files:
 
-    README          useful info for the PI
-    Makefile        helper file for your workflow
-    PID             small text file what the PID is, the Makefile needs it
-    mk_runs.py      [required] produces the run files
-    comments.txt    [required] comments and directives for individual obsnums
-    lmtinfo.txt     output from lmtinfo.py for this PID
-
+    README           useful info for the PI
+    Makefile         helper file for your workflow
+    PID              small text file what the PID is, the Makefile needs it
+    mk_runs.py       [required] produces the run files
+    comments.txt     [required] comments and directives for individual obsnums
+    lmtinfo.txt      output from lmtinfo.py for this PID
 
 ## LMT run files 
 
@@ -54,8 +47,8 @@ approach of course is *bash*, as a pure serial script, in case you care
 of spending the least amount of CPU and can afford to wait. Examples of use:
 
 
-    sbatch_lmtoy.sh  test1.run           # SLURM on Unity
-    parallel  -j 4 < test1.run           # GNU parallel
+    sbatch_lmtoy.sh  test1.run [args]    # SLURM on Unity (optional SLpipeline args allowed)
+    parallel  -j 4 < test1.run           # GNU parallel, using max of 4 cores
     bash             test1.run           # classic serial shell processing
 
 ## Setup
@@ -82,8 +75,7 @@ in lmtoy_run:
 Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
 is a manual process.  For the remainder of this document we assume you have the script generator:
 
-      $ git clone https://github.com/teuben/lmtoy_2021-S1-US-3    #old
-      $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3     #soon
+      $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
       $ cd lmtoy_2021-S1-US-3
 
 On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can generate the **mk_runs.py** file:
@@ -259,9 +251,8 @@ Various ways to view the results:
 
 The script generator is currently maintained under github. We have not discussed how to
 maintain them between DA's and PI. The two competing models are the "trusted collaborator"
-model, as the "pull request from a collaborator branch". A somewhat long explanation is in
-https://github.com/teuben/nemo/blob/master/CONTRIBUTING.md, though we should make our own
-here.
+model, as the "pull request from a collaborator branch". See CONTRIBUTING.md for some
+suggestions and git flow references.
 
 
 # Workflow
