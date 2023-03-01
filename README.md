@@ -5,8 +5,8 @@ SLpipeline. We maintain this in github, so that DA's, PI, and pipeline
 developers can communicate and agree on the best possible pipeline
 run.  All useful PI information about the project should be maintained
 in this script generator directory.  The typical name for the repo
-will be **lmtoy_PID**, where **PID** is the project ID,
-e.g. **lmtoy_2021-S1-US-3**, can can be retrieved on github, viz.
+will be **lmtoy_$PID**, where **$PID** is the project ID,
+e.g. **lmtoy_2021-S1-US-3**, can can be retrieved on github with
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
@@ -24,6 +24,7 @@ The script generator has the following files:
     README           useful info for the PI
     Makefile         helper file for your workflow
     PID              small text file what the PID is, the Makefile needs it
+    $PID             [optional] convenient symlink to the $WORK_LMT/$PID pipeline results
     mk_runs.py       [required] produces the run files
     comments.txt     [required] comments and directives for individual obsnums
     lmtinfo.txt      output from lmtinfo.py for this PID
