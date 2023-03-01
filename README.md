@@ -159,6 +159,10 @@ The following are the suggested steps to maintain your script generator, particu
    will need to be manually monitored to ensure all pipelines finished, before the
    next runfile can be given.
 
+6. After a project was updated, the overall pipeline summary should also be updated
+
+       $ (cd $WORK_LMT/lmtoy_run; make index)
+
 ### Wrap-up
 
 Once the data have been processed, a web summary in README.html is created:
