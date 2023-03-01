@@ -1,37 +1,18 @@
-# Dependencies
+# How to contribute via github.
 
-Building NEMO requires following minimum dependencies:
+There are several models how to collaborate using git with a repository on github,
+we discuss two
 
-* Unix tools, such as: make, csh, bash, git
-* C/C++/Fortran compiler
-* pgplot (optional, but highly recommended)
+1. Trusted Collaborator. This is where all collaborators will be able to directly
+push and pull to the main (formerly called master) branch in the repository.
+Collaborators are still free to experiment on a branch, and conduct their own
+merging. This is the model we use for the QA/DA team.
 
-# git
+2. Friendly Contributor. This is where a contributor will need to fork the repo,
+and submit pull requests from a clone of that fork. This is the most common model
+on github (e.g. in astropy). This is the model we use for the PI.
 
-There are two ways you could have obtained the NEMO source code:
-
-1. You cloned from the *upstream* : https://github.com/teuben/nemo . This is fine
-if you just want to compile and run, but not ideal if you make modifications and
-want to share them back to the *upstream* via a *pull request* (PR). You
-can however "repair" your local repo, discussed below, and still submit a PR.
-
-2. You [forked](https://guides.github.com/activities/forking/) NEMO
-from the *upstream*, and cloned it locally from the repo in your own
-github account. This is the ideal method, but you will still need to
-set the *upstream* manually if you used github.com. See also the
-**gh** command below for an even easier way.
-
-3. Sadly on github.com you will also find a **zip** copy of the repo
-that does actually work fine, except it's a frozen snapshot and cannot
-be efficiently used to collaborate. However, if you cannot install git,
-this is probably the only way to bootstrap yourself. For example
-https://github.com/teuben/nemo/archive/refs/heads/master.zip, which
-will create a directory *nemo-master*. Other branches are available
-through similar zip file construct.
-
-Familiarize yourself with the concept of a pull request on github. There
-are some links at the bottom of this document.
-
+# old NEMO specific details that will be converted to lmtoy now follow
 
 ## gh:   github CLI
 
