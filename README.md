@@ -6,7 +6,7 @@ developers can communicate and agree on the best possible pipeline
 run.  All useful PI information about the project should be maintained
 in this script generator directory.  The typical name for the repo
 will be **lmtoy_$PID**, where **$PID** is the project ID,
-e.g. **lmtoy_2021-S1-US-3**, can can be retrieved on github with
+e.g. **lmtoy_2021-S1-US-3**, which can be retrieved from github with
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
@@ -19,7 +19,7 @@ Important directories to remember in the LMTOY environment:
     $WORK_LMT/$PID                    root directory of your LMT pipeline results for this PID
     $WORK_LMT/lmtoy_run/lmtoy_$PID    script generator for this PID
 
-The script generator has the following files:
+A script generator directory has the following files:
 
     README           useful info for the PI
     Makefile         helper file for your workflow
@@ -33,7 +33,7 @@ The script generator has the following files:
 
 An LMT run file is a text file, consisting of the pipeline commands to
 process a series of obsnums. They are typically created by a script
-generatorm (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
+generato (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
 
 1.  *.run1a - runs the first instance of the pipeline on individual obsnums, with minimal flagging
 2.  *.run1b - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc.
@@ -52,16 +52,21 @@ of spending the least amount of CPU and can afford to wait. Examples of use:
     parallel  -j 4 < test1.run           # GNU parallel, using max of 4 cores
     bash             test1.run           # classic serial shell processing
 
-## Setup
+## Make a new script generator
 
 Using github CLI (the **gh** command) is probably the easiest to
 explain how to bootstrap the script generator. We do this
 in the lmtoy_run directory, since it's simpler to maintain all script
 generators below there. We keep a record of all projects in the Makefile
-in lmtoy_run:
+in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
+
+     $ cd $WORK_LMT
+     $ git clone https://github.com/lmtoy/lmtoy_run
+     $ cd lmtoy_run
+
+then set the project you want to work on
 
      $ PID=2023-S1-MX-47
-     $ cd lmtoy_run
      $ gh repo create --public lmtoy_$PID
      $ gh repo clone lmtoy_$PID
      $ cd lmtoy_$PID
@@ -71,11 +76,21 @@ in lmtoy_run:
      $ git push
 
 
-## Preparing
+## Preparing to run an existing script generator
 
 Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
-is a manual process.  For the remainder of this document we assume you have the script generator:
+is a manual process.  For the remainder of this document we assume you have the script generator.
 
+The first time
+
+      $ cd $WORK_LMT
+      $ git clone https://github.com/lmtoy/lmtoy_run
+      $ cd lmtoy_run
+      $ make git
+
+and if you come back, make sure the repos are updated
+
+      $ make git pull
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
       $ cd lmtoy_2021-S1-US-3
 
@@ -86,7 +101,7 @@ On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can ge
 
 it will be a manual process to align these two files (for now).
 
-## Running
+## Running an existing script generator
 
 The following are the suggested steps to maintain your script generator, particular when new obsnums were added:
 
