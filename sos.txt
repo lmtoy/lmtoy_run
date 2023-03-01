@@ -4,8 +4,8 @@ Summary of Summaries
 # http://taps.lmtgtm.org/lmtslr/$ProjectId
 # ProjectId      ? <ObsNum  #good/#tot    mode    object
 
-2022-S1RSRComm...                      RSR     LineCheck       SciOps
-2023-S1RSRComm...                      RSR     LineCheck       SciOps
+2022-S1RSRComm...                         RSR     LineCheck       SciOps
+2023-S1RSRComm...                         RSR     LineCheck       SciOps
 
 2023-S1-MX-46     * 104106       24       RSR     G09-44907       Arturo
 2023-S1-UM-10     *                       RSR     J*.*            Min
