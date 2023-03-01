@@ -3,16 +3,16 @@
 There are several models how to collaborate using git with a repository on github,
 we discuss two
 
-1. Trusted Collaborator. This is where all collaborators will be able to directly
+1. **Trusted Collaborator**. This is where all collaborators will be able to directly
 push and pull to the main (formerly called master) branch in the repository.
 Collaborators are still free to experiment on a branch, and conduct their own
 merging. This is the model we use for the QA/DA team.
 
-2. Friendly Contributor. This is where a contributor will need to fork the repo,
+2. **Friendly Contributor**. This is where a contributor will need to fork the repo,
 and submit pull requests from a clone of that fork. This is the most common model
 on github (e.g. in astropy). This is the model we use for the PI.
 
-# old NEMO specific details that will be converted to lmtoy now follow
+# NEMO specific old details to be  converted 
 
 ## gh:   github CLI
 
@@ -198,59 +198,6 @@ It can be removed as follows:
       git push original --delete teuben1
 
 Step 2 by the receiver of the PR:
-
-
-
-	
-
-# Tests
-
-From the top level directory in NEMO there are a few basics regression tests and benchmarks:
-
-      make check
-      make bench5
-      make bench
-
-The **check** target depends on the many **Testfile** files sprinkled throughout NEMO.
-
-The **bench5** target currently runs 6 NEMO programs all designed to run 5 seconds on
-some particular processor that your NEMO compilation can now be compared to. The default
-*speed* for that processor is defined to be 1000, anything larger is a faster processor.
-Currently in 2023 we're approaching a single core score of 2000!
-
-
-The **bench** target is still under development, and has a more
-diverse set of programs, all controlled by sprinkled **Benchfile**
-files. See the script **src/scripts/nemo.bench**.
-
-# Debugging
-
-Most applications are built using *make* variables defined in the **$NEMOLIB/makedefs** file.
-Although not recommended, 
-hacking is always possible by directly editing this file, with the caveat you are then
-bypassing the **configure** step of the install, which also does modify some other files.
-Notably the **falcON** package has some extra dependancies that start with configure.
-
-NEMO uses a set of hierarchical Makefiles, and many things (see google) have been written why they
-are bad. But we don't recurse!
-
-## Debuggging NEMO applications
-
-Consult the local Makefile of the application. You should be able to override the compiler (CC=, CXX=, FC=)
-and related options. If the application was integrated into NEMO, there should be a line
-
-      include $(NEMOLIB)/makedefs
-
-in that Makefile, and check the Makefile which are used.
-
-
-An example:
-
-      cd $NEMO/usr/trenti/CGS
-      make clean install FC=flang FFLAGS=-O3
-      make bench2
-
-would create an alternate (and as it happens twice as fast as with gfortran) of the CGS N-body integrator.
 
 
 # References
