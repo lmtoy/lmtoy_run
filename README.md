@@ -16,6 +16,8 @@ but soon this will be
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
+(march 1, 2023)
+
 ## Directories and Files 
 
 Important directories to remember:
