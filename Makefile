@@ -40,6 +40,11 @@ status:
 	-@for dir in $(GIT_DIRS); do\
 	(echo "### $$dir: " ;cd $$dir; git status -suno); done
 
+log:
+	@echo -n "### lmtoy_run: "; git log --pretty=oneline -1
+	-@for dir in $(GIT_DIRS); do\
+	(echo "### $$dir: " ;cd $$dir; git log --pretty=oneline -1); done
+
 branch:
 	@echo -n "### lmtoy_run: "; git branch --show-current
 	-@for dir in $(GIT_DIRS); do\
