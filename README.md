@@ -67,12 +67,13 @@ in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
 then set the project you want to work on
 
      $ PID=2023-S1-MX-47
-     $ gh repo create --public lmtoy_$PID
-     $ gh repo clone lmtoy_$PID
+     $ gh repo create --public lmtoy/lmtoy_$PID
+     $ gh repo clone lmtoy/lmtoy_$PID
      $ cd lmtoy_$PID
      $ cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
      $ echo "PID=\"$PID\"" > PID
-     ...
+     $ git add PID
+     ... (commit all of these)
      $ git push
 
 
@@ -117,13 +118,20 @@ The following are the suggested steps to maintain your script generator, particu
 
    again, the **source_obsnum.sh** script can help you maintain these list.
 
+   An example how they can look:
+
+      on['Arp91']   = [97559, 97560]
+      pars1['Arp91']   = "dv=250 dw=400 extent=240 edge=1"
+      pars2['Arp91']   = "pix_list=-0,5"
+
+
 3. add any deviations from the default args can go as a comment in
    **comments.txt**, the human readable comments itself (for the
    obsnum summary web pages) go first, followed by the comment (#)
    symbol, followed by special SLpipeline.sh arguments, e.g.
 
-       99081  partial map              # pix_list=1,2,3,6,7,8,12,13,14,15
-       99082  full map, one bad beam   # pix_list=-0
+       99081  0,5 are bad       # pix_list=1,2,3,6,7,8,9,10,1112,13,14,15
+       99082  0,5 are bad       # pix_list=-0,5
 
 4. run ./mk_runs.py - this will have created a *run1a* and *run1b* file
    to process all individual obsnums, as well as *run2a* and *run2b* file
