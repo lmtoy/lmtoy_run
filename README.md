@@ -1,6 +1,6 @@
 # The LMT Script Generator
 
-The script generator is the infrastructure to help run the LMT
+The script generator is the infrastructure to help run the
 SLpipeline. We maintain this in github, so that DA's, PI, and pipeline
 developers can communicate and agree on the best possible pipeline
 run.  All useful PI information about the project should be maintained
