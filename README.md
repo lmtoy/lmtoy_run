@@ -64,18 +64,25 @@ in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
      $ git clone https://github.com/lmtoy/lmtoy_run
      $ cd lmtoy_run
 
+and optionally, but strongly recommended, add your personal gitconfig file if you work from the shared lmthelpdesk_umass_edu account
+
+     $ cat $WORK_LMT/gitconfig >> .git/config
+
 then set the project you want to work on
 
      $ PID=2023-S1-MX-47
      $ gh repo create --public lmtoy/lmtoy_$PID
      $ gh repo clone lmtoy/lmtoy_$PID
      $ cd lmtoy_$PID
+     $ cat $WORK_LMT/gitconfig >> .git/config
      $ cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
      $ echo "PID=\"$PID\"" > PID
      $ git add PID
      ... (commit all of these)
      $ git push
 
+
+Again, note the optional cat command to deal with the shared gitconfig issue.
 
 ## Preparing to run an existing script generator
 
