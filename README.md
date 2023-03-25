@@ -68,7 +68,9 @@ and optionally, but strongly recommended, add your personal gitconfig file if yo
 
      $ cat $WORK_LMT/gitconfig >> .git/config
 
-then set the project you want to work on
+Normally this is you personal $HOME/.gitconfig file.
+
+Now set the project you want to work on
 
      $ PID=2023-S1-MX-47
      $ gh repo create --public lmtoy/lmtoy_$PID
