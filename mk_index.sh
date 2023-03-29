@@ -27,11 +27,16 @@ echo "    </th>"
 echo "    <th>"
 echo "      last_pipeline_date"
 echo "    </th>"
+echo "    <th>"
+echo "      comments"
+echo "    </th>"
 echo "  </tr>"
 
 for dir in $*; do
     pid=$(echo $dir|sed s/lmtoy_//)
     wdir=$WORK_LMT/$pid
+
+    comments=$(grep $pid comments.txt | sed s/$pid//)
     
     echo '  <tr class="item">'
     echo "    <td>"
@@ -73,6 +78,12 @@ for dir in $*; do
     echo "    <td>"
     echo "      $date"
     echo "    </td>"
+
+    echo "    <td>"
+    echo "      $comments"
+    echo "    </td>"
+
+    
 
     echo "  </tr>"
 done
