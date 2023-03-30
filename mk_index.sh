@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 #
+#  create the table for http://taps.lmtgtm.org/lmtslr/lmtoy_run/index.html
+#
+#  @todo make it work for local use not on unity
 
 taps=http://taps.lmtgtm.org/lmtslr
 
@@ -11,6 +14,9 @@ echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
 echo "      ProjectID"
+echo "    </th>"
+echo "    <th>"
+echo "      Nsources"
 echo "    </th>"
 echo "    <th>"
 echo "      Nobsnums"
@@ -37,6 +43,8 @@ for dir in $*; do
     wdir=$WORK_LMT/$pid
 
     comments=$(grep $pid comments.txt | sed s/$pid//)
+    ns=TBD
+    ns=$(grep _s= $dir/*run1a | tabcols - 3 | sed s/_s=// | sort | uniq | wc -l)
     
     echo '  <tr class="item">'
     echo "    <td>"
@@ -59,6 +67,10 @@ for dir in $*; do
 	date=""
 	date_obs=""	
     fi
+    echo "    <td>"
+    echo "      $ns"
+    echo "    </td>"
+    
     echo "    <td>"
     echo "      $n"
     echo "    </td>"
