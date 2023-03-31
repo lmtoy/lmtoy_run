@@ -10,14 +10,20 @@ e.g. **lmtoy_2021-S1-US-3**, which can be retrieved from github with
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
+or
+
+      $ git clone git@github.com:/lmtoy/lmtoy_2021-S1-US-3
+
 ## Directories and Files 
 
 Important directories to remember in the LMTOY environment:
 
-    $DATA_LMT                         root directory of LMT (read-only) raw data
-    $WORK_LMT                         root directory of your LMT pipeline results
-    $WORK_LMT/$PID                    root directory of your LMT pipeline results for this PID
-    $WORK_LMT/lmtoy_run/lmtoy_$PID    script generator for this PID
+    $DATA_LMT                             root directory of LMT (read-only) raw data
+    $WORK_LMT                             root directory of your LMT pipeline results
+    $WORK_LMT/$PID                        pipeline results for this PID
+    $WORK_LMT/lmtoy_run/lmtoy_$PID        script generator for this PID
+    $WORK_LMT/lmtoy_run/lmtoy_$PID/$PID   [optional] convenient symlink to $PID
+    $WORK_LMT/$PID/lmtoy_$PID		  [optional] convenient symlink to lmtoy_$PID
 
 A script generator directory has the following files:
 
@@ -33,7 +39,7 @@ A script generator directory has the following files:
 
 An LMT run file is a text file, consisting of the pipeline commands to
 process a series of obsnums. They are typically created by a script
-generato (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
+generator (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
 
 1.  *.run1a - runs the first instance of the pipeline on individual obsnums, with minimal flagging
 2.  *.run1b - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc.
@@ -104,7 +110,8 @@ and if you come back, make sure the repos are updated
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
       $ cd lmtoy_2021-S1-US-3
 
-On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can generate the **mk_runs.py** file:
+On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can generate the **mk_runs.py** file
+for the first time the project was done:
 
       $ source_obsnum.sh 2021-S1-US-3 > test1.py
       $ diff test1.py mk_runs.py
@@ -154,16 +161,16 @@ The following are the suggested steps to maintain your script generator, particu
    machine you are, the execution command that acts on these files is
    different. Lets say the four files are
 
-       PID.run1a
-       PID.run1b
-       PID.run2a
-       PID.run2b
+       $PID.run1a
+       $PID.run1b
+       $PID.run2a
+       $PID.run2b
 
    Note each of these need too wait for the previous one to finish!
 
    On unity the command would be
 
-       $ sbatch_lmtoy.sh PID.run1a
+       $ sbatch_lmtoy.sh $PID.run1a
        ...
 
    but this is an example where you need to wait for each to complete. 
@@ -171,13 +178,13 @@ The following are the suggested steps to maintain your script generator, particu
 
    On a machine with gnu parallel (even multicore laptops can benefit from this)
 
-       $ parallel --jobs 4 < PID.run1a
+       $ parallel --jobs 4 < $PID.run1a
        ...
 
    On a machines with single core, bash will do just fine, in fact, here
    you can submit all four since they operate serially
 
-       $ bash PID.run1a
+       $ bash $PID.run1a
        ...
 
    The latter two can be given at the same time, whereas currently the SLURM method
@@ -192,7 +199,7 @@ The following are the suggested steps to maintain your script generator, particu
 
 Once the data have been processed, a web summary in README.html is created:
 
-     cd $WORK_LMT/PID
+     cd $WORK_LMT/$PID
      mk_summary1.sh > README.html
 
 there should be a symlink from the index.html to this file, if not, do this:
@@ -202,7 +209,7 @@ there should be a symlink from the index.html to this file, if not, do this:
 as well as a symlink to the comments.txt file, again depending on where you
 played the lmtoy_$pid directory:
 
-     ln -s $WORK_LMT/lmt_run/lmtoy_$pid/comments.txt
+     ln -s $WORK_LMT/lmt_run/lmtoy_$PID/comments.txt
      ln -s ../comments.txt
 
 ### Unity cheat list
@@ -210,8 +217,9 @@ played the lmtoy_$pid directory:
 For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
 
       # set the ProjectId
-      $ PID=2021-S1-MX-3
+      PID=2021-S1-MX-3
 
+      # go to the ProjectId directory
       $ cd $WORK_LMT/$PID
 
       # make sure you have symlinks here (only needed once)
@@ -220,35 +228,35 @@ For a given ProjectId, say 2021-S1-MX-3, this is the procedure:
       ln -s README.html index.html
 
 
-      # ensure all the script generator is up to date
+      # ensure the script generator is up to date
       cd $WORK_LMT/lmtoy_run/lmtoy_$PID
       git pull
       make runs
 
       # submit to SLURM, each time wait until that runfile has been processed
-      $ sbatch_lmtoy.sh $PID.run1a
-      $ squeue -u lmtslr_umass_edu
+      sbatch_lmtoy.sh $PID.run1a
+      squeue -u lmtslr_umass_edu
       ...<wait>
       
-      $ sbatch_lmtoy.sh $PID.run1b
-      $ squeue -u lmtslr_umass_edu
+      sbatch_lmtoy.sh $PID.run1b
+      squeue -u lmtslr_umass_edu
       ...<wait>
       
-      $ sbatch_lmtoy.sh $PID.run2a
-      $ squeue -u lmtslr_umass_edu
+      sbatch_lmtoy.sh $PID.run2a
+      squeue -u lmtslr_umass_edu
       ...<wait>
 
-      $ sbatch_lmtoy.sh $PID.run2b
-      $ squeue -u lmtslr_umass_edu
+      sbatch_lmtoy.sh $PID.run2b
+      squeue -u lmtslr_umass_edu
 
 after the runs are all done, and assuming comments.txt was symlinked, you can do
 
       # make summary
 
 SLURM logfiles and runfiles are in:   **$WORK_LMT/sbatch** - occasionally this directory
-should be cleaned of old files, e.g. to remove files older than 3 months:
+should be cleaned of old files, e.g. to remove files older than 1 months:
 
-      $ find $WORK_LMT/sbatch -type f -mtime +90 -delete 
+      $ find $WORK_LMT/sbatch -type f -mtime +30 -delete 
 
 A tip for a project with many sources: the sourcename is tagged in the run file via
 the **_s=** keyword, so for each of the (four) runfiles you can grep out that source name
