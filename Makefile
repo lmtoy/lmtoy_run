@@ -1,7 +1,7 @@
 #   manage the script generators
 
 # old
-GIT_DIRS2 = lmtoy_2014AYUNM044 \
+GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-66 \
 	lmtoy_2021S1RSRCommissioning \
 	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-34 \
@@ -10,20 +10,26 @@ GIT_DIRS2 = lmtoy_2014AYUNM044 \
 	lmtoy_2022S1RSRCommissioning
 
 # new
-GIT_DIRS = \
+GIT_DIRS_2023 = \
 	lmtoy_2023S1RSRCommissioning \
 	lmtoy_2023-S1-MX-40 lmtoy_2023-S1-MX-41 lmtoy_2023-S1-MX-46 lmtoy_2023-S1-MX-47 lmtoy_2023-S1-MX-55 \
 	lmtoy_2023-S1-UM-15 \
 	lmtoy_2023-S1-US-8 lmtoy_2023-S1-US-17 lmtoy_2023-S1-US-18 \
 	lmtoy_2023-S1-UM-10
 
+# default, but the YEAR file can override
+GIT_DIRS = $(GIT_DIRS_2023)
+-include YEAR
+
 .PHONY:  help install build status pull
 
+# don't use BASE2 for new things, as they need to move to BASE
 BASE2 = https://github.com/teuben
 BASE  = https://github.com/lmtoy
 
 help install:
 	@echo "no help/install here"
+	@echo "GIT_DIRS=$(GIT_DIRS)"
 
 git:  
 	-@for dir in $(GIT_DIRS); do\
