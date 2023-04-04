@@ -1,12 +1,13 @@
 #  comments used by mk_index.sh for index.html
 2023-S1-MX-40  detected 91GHz
-2023-S1-MX-41  ?
-2023-S1-MX-46  some detections
+2023-S1-MX-41  [molly]
+2023-S1-MX-46  [molly] some detections
 2023-S1-MX-47  strong CO lines
 2023-S1-MX-55  [caleigh] some strong continuum
 2023-S1-US-8   ?
 2023-S1-UM-10  ?
 2023-S1-UM-15  bad SEQ observation
 2023-S1-US-17  line near 104 GHz
-2023-S1-US-18  ?
+2023-S1-US-18  [caleigh]
 2023S1RSRCommissioning [peter]
+2023S1SEQUOIACommissioning [peter]
