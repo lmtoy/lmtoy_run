@@ -1,4 +1,6 @@
 #  comments used by mk_index.sh for index.html
+#  to update index.html:   "make index"
+#
 2023-S1-MX-40  detected 91GHz
 2023-S1-MX-41  [molly]
 2023-S1-MX-46  [molly] some detections
