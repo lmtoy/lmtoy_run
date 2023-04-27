@@ -53,9 +53,9 @@ for dir in $*; do
 
 
     if [ -d $wdir ]; then
-	on0=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
-	on1=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
-	n=$(cd $wdir ; ls -d ?????/lmtoy.rc ??????/lmtoy.rc | wc -l)
+	on0=$(cd $wdir ; ls -d */lmtoy.rc | sort -n  | head -1 | sed s,/lmtoy.rc,,)
+	on1=$(cd $wdir ; ls -d */lmtoy.rc | sort -n  | tail -1 | sed s,/lmtoy.rc,,)
+	n=$(cd $wdir   ; ls -d */lmtoy.rc | wc -l)
 	r=$wdir/$on1/README.html
 	date=""
 	date_obs=""
