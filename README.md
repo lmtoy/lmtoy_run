@@ -18,6 +18,7 @@ or
 
 Important directories to remember in the LMTOY environment:
 
+    $LMTOY                                root directory of all LMTOY software components
     $DATA_LMT                             root directory of LMT (read-only) raw data
     $WORK_LMT                             root directory of your LMT pipeline results
     $WORK_LMT/$PID                        pipeline results for this PID
@@ -39,29 +40,32 @@ A script generator directory has the following files:
 
 An LMT run file is a text file, consisting of the pipeline commands to
 process a series of obsnums. They are typically created by a script
-generator (mk_runs.py), and typically each *ProjectId* has 4 of these runfiles
+generator (mk_runs.py), and typically each *ProjectId* has a number of these runfiles,
+to be executed in order.
 
 1.  *.run1a - runs the first instance of the pipeline on individual obsnums, with minimal flagging
 2.  *.run1b - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc.
+2.  *.run1c - runs subsequent instances, applying flags, and also allows arguments from comments.txt etc. [optional]
 3.  *.run2a - runs the first instance of the pipeline on all obsnum combinations, one for each source/spectral line
 4.  *.run2b - runs subsequent instances of combinations, applying flags etc.
+4.  *.run2c - runs subsequent instances of combinations, applying flags etc. [optional]
 
-A runfile can be processed (executed) via SLURM, GNU parallel or bash,
-whichever your system supports. On *Unity* we obviously will need to
+A runfile can be processed (executed) via **SLURM**, GNU **parallel** or **bash**,
+whichever your system supports or demands. On *Unity* we obviously will need to
 use SLURM, on *lma@umd* and *malt* the obvious choice is GNU parallel,
 and even on a multi-core laptop this might make sense. The slowest
-approach of course is *bash*, as a pure serial script, in case you care
-of spending the least amount of CPU and can afford to wait. Examples of use:
+approach of course is *bash*, as a pure serial script, but here you are
+spending the least amount of CPU. Examples of use:
 
 
-    sbatch_lmtoy.sh  test1.run [args]    # SLURM on Unity (optional SLpipeline args allowed)
+    sbatch_lmtoy.sh  test1.run [args]    # SLURM on Unity (optional SLpipeline args allowed here)
     parallel  -j 4 < test1.run           # GNU parallel, using max of 4 cores
     bash             test1.run           # classic serial shell processing
 
 ## Make a new script generator
 
 Using github CLI (the **gh** command) is probably the easiest to
-explain how to bootstrap the script generator. We do this
+explain in commands how to bootstrap the script generator. We do this
 in the lmtoy_run directory, since it's simpler to maintain all script
 generators below there. We keep a record of all projects in the Makefile
 in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
@@ -70,13 +74,14 @@ in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
      $ git clone https://github.com/lmtoy/lmtoy_run
      $ cd lmtoy_run
 
-and optionally, but strongly recommended, add your personal gitconfig file if you work from the shared lmthelpdesk_umass_edu account
+and optionally, but strongly recommended, add your personal
+gitconfig file if you work from the shared lmthelpdesk_umass_edu account
 
      $ cat $WORK_LMT/gitconfig >> .git/config
 
 Normally this is you personal $HOME/.gitconfig file.
 
-Now set the project you want to work on
+Now set the project (PID) you want to work on
 
      $ PID=2023-S1-MX-47
      $ gh repo create --public lmtoy/lmtoy_$PID
@@ -136,7 +141,7 @@ The following are the suggested steps to maintain your script generator, particu
 
    An example how they can look:
 
-      on['Arp91']   = [97559, 97560]
+      on['Arp91']      = [97559, 97560]
       pars1['Arp91']   = "dv=250 dw=400 extent=240 edge=1"
       pars2['Arp91']   = "pix_list=-0,5"
 
@@ -155,7 +160,10 @@ The following are the suggested steps to maintain your script generator, particu
    and/or multiple frequency setups, e.g. CO and HCN for M51).
 
    We use two runfiles in order to always show the first pipeline run
-   (restart=1) as well as any improvements. 
+   (restart=1) as well as any improvements.
+
+   For the new 2 IF wares systems (april 2023 and beyond) there will be 3
+   runfiles per obsnum.
 
 5. Now you can execute the run files, in the correct order. Depending on what
    machine you are, the execution command that acts on these files is
@@ -167,6 +175,7 @@ The following are the suggested steps to maintain your script generator, particu
        $PID.run2b
 
    Note each of these need too wait for the previous one to finish!
+   
 
    On unity the command would be
 
@@ -207,7 +216,7 @@ there should be a symlink from the index.html to this file, if not, do this:
      ln -s README.html index.html
 
 as well as a symlink to the comments.txt file, again depending on where you
-played the lmtoy_$pid directory:
+placed the lmtoy_$pid directory:
 
      ln -s $WORK_LMT/lmt_run/lmtoy_$PID/comments.txt
      ln -s ../comments.txt
@@ -284,9 +293,14 @@ Various ways to view the results:
    
        https://taps.lmtgtm.org/lmthelpdesk/$USER/$PID
 
-2. download: the ${OBSNUM}_SRDP.tar file linked in the $WORK_LMT/$PID/$OBSNUM/README.html
-   file contains all data for perhaps easier viewing on your own laptop The pipeline cannot
-   run on this data though.
+   or if you want to see the overnight TAP's (usually available a few minutes after an obsnum has finished)
+
+       https://taps.lmtgtm.org/lmtslr/$PID/TAP
+
+3. download: the ${OBSNUM}_SRDP.tar file linked in the $WORK_LMT/$PID/$OBSNUM/README.html
+   file contains all data for perhaps easier viewing on your own laptop.
+   The pipeline cannot run on this data though since it does contain the raw data.
+   Notice the TAP's do not come with a link to the SRDP tar file.
 
 ## github
 
@@ -296,7 +310,7 @@ model, as the "pull request from a collaborator branch". See CONTRIBUTING.md for
 suggestions and git flow references.
 
 
-# Workflow
+# Workflow Summary
 
 Summary of steps to get the data end-to-end  (this is the current workflow, drafted as such,
 and will likely change):
@@ -306,14 +320,14 @@ and will likely change):
    scripts, etc.
 
 2. malt: Run **SLpipeline_run.sh** on malt. This will watch for new data to appear,
-   run pipeline and make TAP files, and copies these to Unity. If somebody is awake on
+   runs the pipeline and make TAP files, and copies these to Unity. If somebody is awake on
    malt, a webbrowser can be run locally for viewing, and some combination work is sometimes
-   tested already.
+   tested already. The TAP data can also be viewed on unity.
 
 3. any: Collect the (new) PID/OBSNUM, and make a script generator, or update its OBSNUM's. - if
    this is a new PID, the PI should be emailed data is coming, and give them the unity URL
 
-4. unity: Run **../do_untap *.tar** in each $WORK_LMT/PID, this will make them available to PI
+4. <not needed>
 
 5. unity: wait for raw data to arrive, ideally run **lmtinfo.py build** to get a new database.
 
