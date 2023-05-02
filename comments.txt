@@ -3,7 +3,7 @@
 #
 2023-S1-MX-40  detected 91GHz
 2023-S1-MX-41  [molly]
-2023-S1-MX-46  [molly] some detections
+2023-S1-MX-46  [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  strong CO lines
 2023-S1-MX-55  [molly] some strong continuum
 2023-S1-US-8   ?
