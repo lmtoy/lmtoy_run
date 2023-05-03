@@ -7,9 +7,10 @@
 2023-S1-MX-47  strong CO lines
 2023-S1-MX-55  [molly] some strong continuum
 2023-S1-US-8   ?
-2023-S1-UM-10  ?
+2023-S1-UM-10  [caleigh] 
 2023-S1-UM-15  bad SEQ observation
 2023-S1-US-17  line near 104 GHz
 2023-S1-US-18  [caleigh] V1 submitted ~20-apr
-2023S1RSRCommissioning [peter]
+#  
+2023S1RSRCommissioning     [peter]
 2023S1SEQUOIACommissioning [peter]
