@@ -12,8 +12,8 @@
 2023-S1-UM-10  RSR [caleigh] 
 2023-S1-UM-15  SEQ (bad so far)
 2023-S1-US-8   RSR new
-2023-S1-US-17  RSR line near 104 GHz
+2023-S1-US-17  RSR line near 104 GHz - mistake?
 2023-S1-US-18  RSR [caleigh] V1 submitted ~20-apr
 #  
-2023S1RSRCommissioning     [peter]
-2023S1SEQUOIACommissioning [peter]
+2023S1RSRCommissioning     RSR [peter]
+2023S1SEQUOIACommissioning SEQ [peter]
