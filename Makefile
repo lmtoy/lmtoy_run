@@ -16,7 +16,7 @@ GIT_DIRS_2023 = \
 	lmtoy_2023-S1-MX-49 lmtoy_2023-S1-MX-55 \
 	lmtoy_2023-S1-UM-15 \
 	lmtoy_2023-S1-US-8 lmtoy_2023-S1-US-17 lmtoy_2023-S1-US-18 \
-	lmtoy_2023-S1-UM-10
+	lmtoy_2023-S1-UM-8 lmtoy_2023-S1-UM-10
 
 # default, but the YEAR file can override
 GIT_DIRS = $(GIT_DIRS_2023)
