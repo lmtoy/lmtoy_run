@@ -8,10 +8,10 @@
 2023-S1-MX-47  RSR strong CO lines
 2023-S1-MX-49  SEQ new
 2023-S1-MX-55  RSR [molly] some strong continuum
-2023-S1-US-8   RSR new
-2023-S1-UM-10  SEQ new
+2023-S1-UM-8   SEQ new
 2023-S1-UM-10  RSR [caleigh] 
 2023-S1-UM-15  SEQ (bad so far)
+2023-S1-US-8   RSR new
 2023-S1-US-17  RSR line near 104 GHz
 2023-S1-US-18  RSR [caleigh] V1 submitted ~20-apr
 #  
