@@ -7,7 +7,7 @@ we discuss two
 push and pull to the main (formerly called master) branch in the repository.
 Collaborators are still free to experiment on a branch, and conduct their own
 merging. This is the model we use for the QA/DA team.
-
+\
 2. **Friendly Contributor**. This is where a contributor will need to fork the repo,
 and submit pull requests from a clone of that fork. This is the most common model
 on github (e.g. in astropy). This is the model we use for the PI.
