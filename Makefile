@@ -73,6 +73,7 @@ runs:
 	(cd $$dir; make runs); done
 
 TAPS = http://taps.lmtgtm.org/lmtslr
-## index:   update the index for TAPS (lmtoy_run)
+## index:   update the index for TAPS (lmtoy_run) - keeps one index.old.html
 index:
+	@cp index.html index.old.html
 	@./mk_index.sh $(GIT_DIRS) > index.html
