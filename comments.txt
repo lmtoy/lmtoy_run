@@ -2,7 +2,7 @@
 #  to update index.html:   "make index"
 #
 2023-S1-MX-28  SEQ new - 1 bank
-2023-S1-MX-40  RSR [molly] detected 91GHz
+2023-S1-MX-40  RSR [molly] detected 91GHz - V1 submitting soon
 2023-S1-MX-41  RSR [molly] V1 submitted
 2023-S1-MX-46  RSR [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  RSR [molly] strong CO lines - V1 submitting soon
