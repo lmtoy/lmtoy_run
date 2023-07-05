@@ -24,11 +24,11 @@ lmtinfo.py grep 2021-S1 | tabcols - 7,3 | sort | uniq -c | sort -nr | tabalign.p
 
 script-generators
 
-lmtoy_2021-S1-MX-14
-lmtoy_2021-S1-MX-3
-lmtoy_2021-S1-MX-34
-lmtoy_2021-S1-UM-1
-lmtoy_2021-S1-UM-11
-lmtoy_2021-S1-UM-3
-lmtoy_2021-S1-US-3
-lmtoy_2021S1RSRCommissioning
+     lmtoy_2021-S1-MX-14
+     lmtoy_2021-S1-MX-3
+     lmtoy_2021-S1-MX-34
+     lmtoy_2021-S1-UM-1
+     lmtoy_2021-S1-UM-11
+     lmtoy_2021-S1-UM-3
+     lmtoy_2021-S1-US-3
+     lmtoy_2021S1RSRCommissioning
