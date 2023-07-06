@@ -38,11 +38,12 @@ echo "      comments"
 echo "    </th>"
 echo "  </tr>"
 
+#   loop over each command line argument (the lmtoy_PID's)
 for dir in $*; do
     pid=$(echo $dir|sed s/lmtoy_//)
     wdir=$WORK_LMT/$pid
 
-    comments=$(grep $pid comments.txt | sed s/$pid//)
+    comments=$(grep -w ^$pid comments.txt | sed s/$pid//)
     ns=TBD
     ns=$(grep _s= $dir/*run1a | tabcols - 3 | sed s/_s=// | sort | uniq | wc -l)
     
