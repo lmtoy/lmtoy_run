@@ -10,14 +10,17 @@
 2023-S1-MX-55  RSR [molly] some strong continuum - V1 submitting soon
 2023-S1-UM-8   SEQ new - 1 bank - NGC4388 wide
 2023-S1-UM-10  RSR [caleigh] V1 submitted 26-jun
-2023-S1-UM-15  SEQ (bad so far)
-2023-S1-UM-16  SEQ (bad ?)
-2023-S1-US-8   RSR [caleigh] new
-2023-S1-US-17  RSR [caleigh] line near 104 GHz - mistake?
+2023-S1-UM-15  SEQ (MikeH/Peter)
+2023-S1-UM-16  SEQ (MikeH/Peter)
+2023-S1-US-8   RSR [caleigh] V1 submitting soon - 19-jul
+2023-S1-US-17  RSR [caleigh] line near 104 GHz - V1 submitting soon
 2023-S1-US-18  RSR [caleigh] V1 submitted ~20-apr
 #  
 2023S1RSRCommissioning     RSR [peter]
 2023S1SEQUOIACommissioning SEQ [peter]
+#
+2022S1RSRCommissioning     RSR
+2022S1SEQUOIACommissioning SEQ [peter]
 #
 2021-S1-MX-3  SEQ   EDGE survey
 2021-S1-UM-11 RSR  
@@ -30,3 +33,18 @@
 2021-S1-UM-1  SEQ   BKP7323_CO
 2021-S1-US-17 RSR   no script?
 2021-S1-MX-5  SEQ   NGC6946
+#
+#  -- below this not moved over to lmtoy yet
+#
+2021-S1-MX-26 
+2021-S1-US-17 
+2021-S1-US-19 
+2021-S1-MX-5
+#
+2018-S1-MU-45 
+2018-S1-MU-46
+2018-S1-MU-66 
+2018-S1-MU-64
+2018-S1-MU-8 
+#
+2014AYUNM044
