@@ -83,3 +83,4 @@ TAPS = http://taps.lmtgtm.org/lmtslr
 index:
 	@cp index.html index.old.html
 	@./mk_index.sh $(GIT_DIRS) > index.html
+	@echo "xdg-open http://taps.lmtgtm.org/lmtslr/lmtoy_run"
