@@ -3,17 +3,17 @@
 #
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
-2023-S1-MX-41  RSR 	   [molly] V1 submitted (jun?)
+2023-S1-MX-41  RSR 	   [molly] V1 submitted (`jun?)
 2023-S1-MX-46  RSR 	   [molly] some detections - V1 submitted 2-may
-2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitting soon
+2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   new (birdies 4096) - 2 banks
-2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitting soon
+2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   new - 1 bank - NGC4388 wide
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
 2023-S1-UM-15  SEQ 	   (MikeH/PeterT)
 2023-S1-UM-16  SEQ 	   (MikeH/PeterT)
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
-2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitting soon
+2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
 #  
 2023S1RSRCommissioning     RSR [peter]
