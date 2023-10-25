@@ -1,6 +1,8 @@
 #  comments used by mk_index.sh for index.html
 #  to update index.html:   "make index"
-#  but note the GIT_DIRS= in the Makefile to direct which years are in the index.html file
+#  after which the overview of all projects is here:  http://taps.lmtgtm.org/lmtslr/lmtoy_run/
+#
+#  Note the GIT_DIRS= in the Makefile to direct which years are in the index.html file
 #
 #  See also:  $LMTOY/etc/ProjectId.csv
 #
@@ -26,10 +28,11 @@
 2022S1SEQUOIACommissioning SEQ [peter]
 #
 2021-S1-MX-3  SEQ          EDGE survey
-2021-S1-UM-11 RSR       
+2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1
-2021-S1-US-3  SEQ          M100
 2021-S1-MX-34 RSR       
+2021-S1-UM-11 RSR       
+2021-S1-US-3  SEQ          M100
 2021-S1-UM-3  SEQ/Bs       UGCA281
 2021-S1-UM-1  SEQ          BKP7323_CO
 #
@@ -38,7 +41,6 @@
 2021-S1-MX-26  RSR         IRAS* 
 2021-S1-US-17  RSR         J1557+1540 
 2021-S1-US-19  RSR         Cyg_X-1 
-2021-S1-MX-5   SEQ  	   NGC6946
 #  
 2018-S1-MU-8   SEQ	   NGC628, NGC5194
 2018S1-MU-8    SEQ  	   (typo for MU-8; patched via lmtinfo.py)
