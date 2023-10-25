@@ -16,7 +16,7 @@ GIT_DIRS_2018 = \
 
 # 	lmtoy_2021S1RSRCommissioning 
 GIT_DIRS_2021 = \
-	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-34 \
+	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-5 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-34 \
 	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3 lmtoy_2021-S1-UM-11 \
 	lmtoy_2021-S1-US-3 \
 
