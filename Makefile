@@ -29,7 +29,7 @@ GIT_DIRS_2023 = \
 	lmtoy_2023-S1-US-8 lmtoy_2023-S1-US-17 lmtoy_2023-S1-US-18
 
 GIT_DIRS_2024 = \
-	2024S1SEQUOIACommissioning
+	lmtoy_2024S1SEQUOIACommissioning
 
 
 # default, but the YEAR file can override
