@@ -1,5 +1,7 @@
 #   manage the script generators
 
+# missing:   2018-S1-MU-31
+
 # old
 GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-66 \
@@ -29,7 +31,8 @@ GIT_DIRS_2023 = \
 	lmtoy_2023-S1-US-8 lmtoy_2023-S1-US-17 lmtoy_2023-S1-US-18
 
 GIT_DIRS_2024 = \
-	lmtoy_2024S1SEQUOIACommissioning
+	lmtoy_2024S1SEQUOIACommissioning \
+	lmtoy_2024-S1-MX-34
 
 
 # default, but the YEAR file can override
