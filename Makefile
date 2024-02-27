@@ -32,6 +32,7 @@ GIT_DIRS_2023 = \
 
 GIT_DIRS_2024 = \
 	lmtoy_2024S1SEQUOIACommissioning \
+	lmtoy_2024S1RSRCommissioning \
 	lmtoy_2024-S1-MX-34
 
 
