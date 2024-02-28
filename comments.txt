@@ -5,12 +5,15 @@
 #  Note the GIT_DIRS= in the Makefile to direct which years are in the index.html file
 #
 #  See also:  $LMTOY/etc/ProjectId.csv
+#
 
+2024-S1-MX-34              RSR (NGC_4449)
 
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]
-2024MSIP1mmCommissioning
-2024S1MSIP1mmCommissioning
+2024MSIP1mmCommissioning   1MM [peter]
+2024S1MSIP1mmCommissioning 1MM [peter]
+
 
 #
 2023-S1-MX-28  SEQ         new - 1 bank
