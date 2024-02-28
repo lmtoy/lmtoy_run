@@ -7,7 +7,7 @@
 #  See also:  $LMTOY/etc/ProjectId.csv
 #
 
-2024-S1-MX-34              RSR (NGC_4449)
+2024-S1-MX-34              RSR - NGC_4449
 
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]
@@ -25,8 +25,8 @@
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   new - 1 bank - NGC4388 wide
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
-2023-S1-UM-15  SEQ 	   (MikeH/PeterT)
-2023-S1-UM-16  SEQ 	   (MikeH/PeterT)
+2023-S1-UM-15  SEQ 	   (MarkH/PeterT)
+2023-S1-UM-16  SEQ 	   (MarkH/PeterT)
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
