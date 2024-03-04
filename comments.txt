@@ -7,7 +7,12 @@
 #  See also:  $LMTOY/etc/ProjectId.csv
 #
 
+
+
+2024-S1-MX-11              RSR - GoodsN
+2024-S1-MX-22              RSR -
 2024-S1-MX-34              RSR - NGC_4449
+2024-S1-UM-9               RSR -
 
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]
@@ -66,7 +71,7 @@
 2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-25  SEQ/Ps  	   Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
-2018-S1-MU-31  SEQ     	   OH2.6-0.4  (=2)              92825
+2018-S1-MU-31  SEQ     	   B59  (2) 
 2018-S1-MU-57  RSR     	   HerBS-195  (12/18)
 2018-S1-MU-66  SEQ         IRAS*
 2018-S1-MU-78  RSR     	   J*   (31)
