@@ -39,7 +39,7 @@ GIT_DIRS_2024 = \
 
 
 # default, but the YEAR file can override
-GIT_DIRS = $(GIT_DIRS_2023)
+GIT_DIRS = $(GIT_DIRS_2024) $(GIT_DIRS_2023)
 -include YEAR
 
 .PHONY:  help install build status pull
