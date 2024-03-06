@@ -115,7 +115,7 @@ If you have become a fan on the **gh pr** method, here's the recipe for this:
 once the branch has been merged, you don't need it locally anymore, so delete it
 
       git branch -d b1
-      git push original --delete b1
+      git push origin --delete b1
 
 
 ## Common work in a branch
