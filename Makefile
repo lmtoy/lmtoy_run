@@ -35,7 +35,8 @@ GIT_DIRS_2024 = \
 	lmtoy_2024S1SEQUOIACommissioning \
 	lmtoy_2024S1RSRCommissioning \
 	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-34 \
-	lmtoy_2024-S1-UM-9
+	lmtoy_2024-S1-UM-9 \
+	lmtoy_2024-S1-MX-2
 
 
 # default, but the YEAR file can override
