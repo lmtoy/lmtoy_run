@@ -1,14 +1,15 @@
 #   manage the script generators
 
+# where they are stored (used to be https://github.com/teuben)
+BASE  = https://github.com/lmtoy
+
+
 # missing:   2018-S1-MU-31
 
 # old
 GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-45 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-66 \
 	lmtoy_2021S1RSRCommissioning \
-	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-34 \
-	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3 lmtoy_2021-S1-UM-11 \
-	lmtoy_2021-S1-US-3 \
 	lmtoy_2022S1RSRCommissioning
 
 GIT_DIRS_2018 = \
@@ -33,19 +34,16 @@ GIT_DIRS_2023 = \
 GIT_DIRS_2024 = \
 	lmtoy_2024S1SEQUOIACommissioning \
 	lmtoy_2024S1RSRCommissioning \
-	lmtoy_2024-S1-MX-34
+	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-34 \
+	lmtoy_2024-S1-UM-9 \
+	lmtoy_2024-S1-MX-2
 
 
 # default, but the YEAR file can override
-GIT_DIRS = $(GIT_DIRS_2023)
+GIT_DIRS = $(GIT_DIRS_2024) $(GIT_DIRS_2023)
 -include YEAR
 
 .PHONY:  help install build status pull
-
-# don't use BASE2 for new things, as they need to move to BASE
-BASE2 = https://github.com/teuben
-BASE  = https://github.com/lmtoy
-
 
 ## install:   
 install:

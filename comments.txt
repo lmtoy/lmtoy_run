@@ -5,13 +5,20 @@
 #  Note the GIT_DIRS= in the Makefile to direct which years are in the index.html file
 #
 #  See also:  $LMTOY/etc/ProjectId.csv
+#
 
+
+
+2024-S1-MX-2               SEQ
+2024-S1-MX-11              RSR -  (det?)
+2024-S1-MX-22              RSR -
+2024-S1-MX-34              RSR - NGC_4449
+2024-S1-UM-9               RSR - GoodsN
 
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
-
-2024MSIP1mmCommissioning   1MM [peter]  Ps testing
-2024S1MSIP1mmCommissioning 1MM [peter]  wrong name?
+2024S1MSIP1mmCommissioning 1MM [peter]
+2024MSIP1mmCommissioning   1MM [peter]  wrong name
 
 #
 2023-S1-MX-28  SEQ         new - 1 bank
@@ -23,8 +30,8 @@
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   new - 1 bank - NGC4388 wide
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
-2023-S1-UM-15  SEQ 	   (MikeH/PeterT)
-2023-S1-UM-16  SEQ 	   (MikeH/PeterT)
+2023-S1-UM-15  SEQ 	   (MarkH/PeterT)
+2023-S1-UM-16  SEQ 	   (MarkH/PeterT)
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
@@ -64,7 +71,7 @@
 2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-25  SEQ/Ps  	   Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
-2018-S1-MU-31  SEQ     	   OH2.6-0.4  (=2)              92825
+2018-S1-MU-31  SEQ     	   B59  (2) 
 2018-S1-MU-57  RSR     	   HerBS-195  (12/18)
 2018-S1-MU-66  SEQ         IRAS*
 2018-S1-MU-78  RSR     	   J*   (31)
