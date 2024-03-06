@@ -8,9 +8,10 @@
 
 
 2024S1RSRCommissioning     RSR [peter]
-2024S1SEQUOIACommissioning SEQ [peter]
-2024MSIP1mmCommissioning
-2024S1MSIP1mmCommissioning
+2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
+
+2024MSIP1mmCommissioning   1MM [peter]  Ps testing
+2024S1MSIP1mmCommissioning 1MM [peter]  wrong name?
 
 #
 2023-S1-MX-28  SEQ         new - 1 bank
