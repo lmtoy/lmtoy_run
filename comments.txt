@@ -13,7 +13,10 @@
 2024-S1-MX-22              RSR -
 2024-S1-MX-24              RSR -
 2024-S1-MX-34              RSR - NGC_4449
+2024-S1-SP-5               SEQ - 
+2024-S1-UM-3               SEQ -
 2024-S1-UM-9               RSR - GoodsN
+2024-S1-US-20              SEQ - 
 
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
