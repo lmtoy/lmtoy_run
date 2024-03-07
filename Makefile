@@ -59,8 +59,11 @@ git:
 	-@for dir in $(GIT_DIRS); do\
 	(if [ ! -d $$dir ]; then git clone $(BASE)/$$dir ; fi); done
 
+pull1:
+	git pull
+
 ## pull:    git pull    from all repos from GIT_DIRS=
-pull:
+pull:   pull1
 	@echo -n "### lmtoy_run: "; git pull
 	-@for dir in $(GIT_DIRS); do\
 	(echo -n "### $$dir: " ;cd $$dir; git pull); done
