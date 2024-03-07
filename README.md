@@ -1,18 +1,30 @@
 # The LMT Script Generator
 
 The script generator is the infrastructure to help run the
-SLpipeline. We maintain this in github, so that DA's, PI, and pipeline
-developers can communicate and agree on the best possible pipeline
-run.  All useful PI information about the project should be maintained
-in this script generator directory.  The typical name for the repo
-will be **lmtoy_$PID**, where **$PID** is the project ID,
-e.g. **lmtoy_2021-S1-US-3**, which can be retrieved from github with
+SLpipeline. We maintain this in github, so that DA's, pipeline
+developers, and even the PI, can communicate and agree on the best
+possible pipeline run.  All useful PI information about the project
+should be maintained in this script generator directory.  The typical
+name for the repo will be **lmtoy_$PID**, where **$PID** is the
+project ID, e.g. **lmtoy_2021-S1-US-3**, which can be retrieved from
+github with
 
       $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
 
 or
 
       $ git clone git@github.com:/lmtoy/lmtoy_2021-S1-US-3
+
+
+## URLs
+
+
+    http://taps.lmtgtm.org/lmtslr/lmtoy_run/        - LMTOY pipeline index list to all projects
+    http://taps.lmtgtm.org/lmtslr/2021-S1-US-3/     - Example of a project
+    http://taps.lmtgtm.org/lmtslr/2021-S1-US-3/TAP  - Example of the lightweight TAPs of a project
+    https://www.astro.umd.edu/~teuben/work_lmt/     - peter's non-official experiments
+
+
 
 ## Directories and Files 
 
@@ -22,19 +34,20 @@ Important directories to remember in the LMTOY environment:
     $DATA_LMT                             root directory of LMT (read-only) raw data
     $WORK_LMT                             root directory of your LMT pipeline results
     $WORK_LMT/$PID                        pipeline results for this PID
-    $WORK_LMT/lmtoy_run/lmtoy_$PID        script generator for this PID
+    $WORK_LMT/lmtoy_run/lmtoy_$PID        script generator for this PID (note location!)
     $WORK_LMT/lmtoy_run/lmtoy_$PID/$PID   [optional] convenient symlink to $PID
     $WORK_LMT/$PID/lmtoy_$PID		  [optional] convenient symlink to lmtoy_$PID
 
 A script generator directory has the following files:
 
-    README           useful info for the PI
-    Makefile         helper file for your workflow
-    PID              small text file what the PID is, the Makefile needs it
-    $PID             [optional] convenient symlink to the $WORK_LMT/$PID pipeline results
-    mk_runs.py       [required] produces the run files
-    comments.txt     [required] comments and directives for individual obsnums
-    lmtinfo.txt      output from lmtinfo.py for this PID
+    README.md              verbiage info for the PI
+    Makefile               helper file for your workflow
+    PID                    small text file what the PID is, the Makefile needs it
+    $PID                   [optional] convenient symlink to the $WORK_LMT/$PID pipeline results
+    mk_runs.py             [required] produces the run files
+    comments.txt           [required] comments and directives for individual obsnums
+    lmtinfo.txt            output from lmtinfo.py for this PID
+    LMT_$PID_phase2.xlsx   phase-2 info
 
 ## LMT run files 
 
@@ -64,11 +77,12 @@ spending the least amount of CPU. Examples of use:
 
 ## Make a new script generator
 
-Using github CLI (the **gh** command) is probably the easiest to
+Using the github CLI (the **gh** command) is probably the easiest to
 explain in commands how to bootstrap the script generator. We do this
-in the lmtoy_run directory, since it's simpler to maintain all script
-generators below there. We keep a record of all projects in the Makefile
-in lmtoy_run. First you need to grab lmtoy_run if that was not done yet:
+fromf the **lmtoy_run** directory, since it's simpler (and now
+required) to maintain all script generators below there. We keep a
+record of all projects in the Makefile in lmtoy_run. First you need to
+grab lmtoy_run if that was not done yet:
 
      $ cd $WORK_LMT
      $ git clone https://github.com/lmtoy/lmtoy_run
@@ -81,38 +95,19 @@ gitconfig file if you work from the shared lmthelpdesk_umass_edu account
 
 Normally this is you personal $HOME/.gitconfig file.
 
-Now set the project (PID) you want to work on
+The **mk_project.sh** script will create a template, viz.
 
      $ PID=2023-S1-MX-47
-     $ gh repo create --public lmtoy/lmtoy_$PID
-     $ gh repo clone lmtoy/lmtoy_$PID
-     $ cd lmtoy_$PID
-     $ cat $WORK_LMT/gitconfig >> .git/config
-     $ cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
-     $ echo "PID=\"$PID\"" > PID
-     $ git add PID
-     ... (commit all of these)
-     $ git push
-
+     $ ./mk_project.sh $PID
 
 Again, note the optional cat command to deal with the shared gitconfig issue.
 
 ## Preparing to run an existing script generator
 
-Ideally we have a script that sets up the script generator for a new project, but currently the bootstrap
-is a manual process.  For the remainder of this document we assume you have the script generator.
+First make sure all repos for your YEAR's are refreshed:
 
-The first time
-
-      $ cd $WORK_LMT
-      $ git clone https://github.com/lmtoy/lmtoy_run
-      $ cd lmtoy_run
-      $ make git
-
-and if you come back, make sure the repos are updated
-
+      $ cd $WORK_LMT/lmtoy_run
       $ make git pull
-      $ git clone https://github.com/lmtoy/lmtoy_2021-S1-US-3
       $ cd lmtoy_2021-S1-US-3
 
 On any machine with an updated $DATA_LMT, the **source_obsnum.sh** script can generate the **mk_runs.py** file
@@ -200,9 +195,14 @@ The following are the suggested steps to maintain your script generator, particu
    will need to be manually monitored to ensure all pipelines finished, before the
    next runfile can be given.
 
-6. After a project was updated, the overall pipeline summary should also be updated
+   After all this, the summary for this project needs to be updated:
+
+       $ make summary
+
+6. After a project was updated, the LMTOY pipeline index should also be updated
 
        $ (cd $WORK_LMT/lmtoy_run; make index)
+       $ xdg-open http://taps.lmtgtm.org/lmtslr/lmtoy_run/
 
 ### Wrap-up
 
@@ -308,6 +308,42 @@ The script generator is currently maintained under github. We have not discussed
 maintain them between DA's and PI. The two competing models are the "trusted collaborator"
 model, as the "pull request from a collaborator branch". See CONTRIBUTING.md for some
 suggestions and git flow references.
+
+### Here are the recommended steps for DA as a "trusted collaborator?":
+
+1. Get a fresh copy of lmtoy_PID script generator, normally via lmtoy_run, and pull it to
+   be up to par. We use the **2024-S1-MX-2** project as example, with **peter** as the
+   DA that is testing the pipeline with some new flags, comments, obsnums etc.
+
+         PID=2024-S1-MX-2
+         cd $WORK_LMT/lmtoy_run/$PID
+	 git pull
+	 git checkout peter
+         git merge origin/peter
+
+2. This last command is to ensure that **peter** has all the latest updates from the **main** branch.
+   Now edit the various files at your leisure:
+
+         edit comments.txt
+	 edit mk_runs.py
+
+3. and prepare runfiles for the pipeline
+
+         make runs
+	 sbatch_lmtoy.sh *run1a
+	 <wait for finish>
+	 make summary
+
+4. If happy, commit them for later main branch merge:
+
+         git comment -m "my changes bla bla"  comments.txt mk_runs.py
+
+
+
+### Master Pipeliner
+
+
+
 
 
 # Workflow Summary
