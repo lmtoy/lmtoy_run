@@ -30,3 +30,7 @@ git add {README.md,Makefile,mk_runs.py,comments.txt}
 git commit -m new {README.md,Makefile,mk_runs.py,comments.txt,PID}
 git push
 
+
+echo "Don't forget to add your PID:"
+echo "     $PID to comments.txt "
+echo "     lmtoy_$PID in the Makefile in the appropriate year"
