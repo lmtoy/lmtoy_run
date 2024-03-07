@@ -57,7 +57,7 @@ help: Makefile
 	@sed -n 's/^##//p' $<
 
 ## git:     ensure all git repos for GIT_DIRS= are present
-git:  
+git:  pull1
 	-@for dir in $(GIT_DIRS); do\
 	(if [ ! -d $$dir ]; then git clone $(BASE)/$$dir ; fi); done
 
