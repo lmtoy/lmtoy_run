@@ -22,10 +22,11 @@ links1: $(PID)
 links2: $(PID)/comments.txt
 
 $(PID):
-	(mkdir -p $(WORK_LMT)/$(PID); ln -s $(WORK_LMT)/$(PID))
+	(mkdir -p $(WORK_LMT)/$(PID); ln -sf $(WORK_LMT)/$(PID))
 
 $(PID)/comments.txt:
-	(cd $(PID); ln -sf $(PWD)/comments.txt; ln -sf README.html index.html)
+	(cd $(PID); ln -sf $(PWD)/comments.txt; ln -sf README.html index.html; \
+	ln -sf $(WORK_LMT)/lmtoy_run/lmtoy_$(PID))
 
 summary:
 	@for p in $(PID); do \
