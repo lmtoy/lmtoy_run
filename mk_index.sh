@@ -10,6 +10,8 @@ echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
 echo "Index created $(date) (click on column name to sort by that column)"
+echo "<br>"
+echo "<A HREF=$taps/lmtoy_run/last100.html>Latest 100 obsnums available as lightweight TAPs</A>"
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
