@@ -33,6 +33,10 @@ summary:
 	(echo $$p;  cd $(WORK_LMT)/$$p; mk_summary1.sh > README.html); \
 	done
 
+# master index one level up
+index:
+	(cd ..; make index)
+
 q:
 	squeue -u lmtslr_umass_edu | awk '{print NR-1,$$0}'
 
