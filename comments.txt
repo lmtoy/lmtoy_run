@@ -8,16 +8,17 @@
 #
 
 
-2024-S1-MX-2               SEQ - 400Mhz/VLSR?
 2024-S1-MX-11              RSR [Alaina] J154506 strong line
+2024-S1-MX-2               SEQ - 400Mhz/VLSR?  (2023-S1-UM-16)
 2024-S1-MX-22              RSR - HATLAS
 2024-S1-MX-24              RSR - 
 2024-S1-MX-34              RSR - NGC_4449
+2024-S1-MX-35              SEQ - TYC_2597_735_1
 2024-S1-SP-5               SEQ - NGC_4038S
 2024-S1-SP-7               RSR -
 2024-S1-UM-1               SEQ - NGC4388 gal det (2023-S1-UM-8)
 2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
-2024-S1-UM-9               RSR - GoodsN
+2024-S1-UM-9               RSR [Molly] GoodsN
 2024-S1-US-5               RSR - C1/C2/...
 2024-S1-US-20              SEQ - NGC5347 detection
 
@@ -36,8 +37,8 @@
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   new - 1 bank - NGC4388 wide
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
-2023-S1-UM-15  SEQ 	   (MarkH/PeterT)
-2023-S1-UM-16  SEQ 	   (MarkH/PeterT)
+2023-S1-UM-15  SEQ 	   (MarkH/PeterT) HB114_13CO  
+2023-S1-UM-16  SEQ 	   (MarkH/PeterT) G1.7+3.7-234
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
