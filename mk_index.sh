@@ -4,14 +4,24 @@
 #
 #  @todo make it work for local use not on unity
 
+tap1=http://taps.lmtgtm.org/lmtslr           # /nese/toltec/dataprod_lmtslr/work_lmt
+tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work_lmt_helpdesk/peter
 taps=http://taps.lmtgtm.org/lmtslr
+
+if [ $WORK_LMT == $tap1 ]; then
+    taps=$tap1
+else
+    user=$(echo $WORK_LMT | cut -d/ -f6)
+    taps=$tap2/$user
+fi
+
 
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
 echo "Index created $(date) (click on column name to sort by that column)"
 echo "<br>"
-echo "<A HREF=$taps/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
+echo "<A HREF=$tap1/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
 echo "<br>"
 echo "<A HREF=index.old.html>Previous listing of this file.</A>"
 echo '<table border=1 class="sortable">'
