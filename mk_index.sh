@@ -15,7 +15,7 @@ else
     taps=$tap2/$user
 fi
 
-
+echo "<!-- Using taps=$taps -->"
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
