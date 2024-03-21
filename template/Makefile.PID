@@ -40,3 +40,6 @@ index:
 q:
 	squeue -u lmtslr_umass_edu | awk '{print NR-1,$$0}'
 
+
+new:
+	source_obsnum.sh $(PID)
