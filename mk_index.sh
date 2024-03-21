@@ -7,6 +7,7 @@
 tap1=http://taps.lmtgtm.org/lmtslr           # /nese/toltec/dataprod_lmtslr/work_lmt
 tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work_lmt_helpdesk/peter
 taps=http://taps.lmtgtm.org/lmtslr
+dv=http://taps.lmtgtm.org/dvsearch/          # DataVerse
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -27,6 +28,8 @@ echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js
 echo "Index created $(date) (click on column name to sort by that column)"
 echo "<br>"
 echo "<A HREF=$tap1/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
+echo "<br>"
+echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
 echo "<A HREF=index.old.html>Previous listing of this file.</A>"
 echo '<table border=1 class="sortable">'

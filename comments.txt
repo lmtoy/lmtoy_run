@@ -12,7 +12,7 @@
 2024-S1-MX-11              RSR [Alaina] J154506 strong line [complete]
 2024-S1-MX-20              SEQ - NGC4189=d, NGC5347=d, IC3392=d
 2024-S1-MX-22              RSR - HATLAS
-2024-S1-MX-24              SEQ - Per-emb-2
+2024-S1-MX-24              SEQ - Per-emb-2 - narrow line
 2024-S1-MX-32              SEQ - G38.60
 2024-S1-MX-34              RSR - NGC_4449
 2024-S1-MX-35              SEQ - TYC_2597_735_1
@@ -21,7 +21,7 @@
 2024-S1-UM-1               SEQ - NGC4388 gal det (2023-S1-UM-8)
 2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
 2024-S1-UM-9               RSR [Molly] GoodsN
-2024-S1-US-5               RSR - C1/C2/...
+2024-S1-US-5               RSR [Molly] C1/C2/...
 2024-S1-US-20              SEQ - G45.47 (4-mosaic)
 
 2024S1RSRCommissioning     RSR [peter]
