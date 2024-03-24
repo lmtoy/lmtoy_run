@@ -69,26 +69,26 @@ pull1:
 pull:   pull1
 	@echo -n "### lmtoy_run: "; git pull
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "### $$dir: " ;cd $$dir; git pull); done
+	(echo -n "### $$dir " ;cd $$dir; git pull); done
 	@echo Last pull: `date` >> git.log
 
 ## status:  git status -uno  from all repos from GIT_DIRS=
 status:
 	@echo -n "### lmtoy_run: "; git status -uno
 	-@for dir in $(GIT_DIRS); do\
-	(echo "### $$dir: " ;cd $$dir; git status -suno); done
+	(echo "### $$dir " ;cd $$dir; git status -suno); done
 
 ## log:     git log --pretty=oneline    from all repos from GIT_DIRS=
 log:
 	@echo -n "### lmtoy_run: "; git log --pretty=oneline -1
 	-@for dir in $(GIT_DIRS); do\
-	(echo "### $$dir: " ;cd $$dir; git log --pretty=oneline -1); done
+	(echo "### $$dir " ;cd $$dir; git log --pretty=oneline -1); done
 
 ## branch:  git branch --show-current    from all repos from GIT_DIRS=
 branch:
 	@echo -n "### lmtoy_run: "; git branch --show-current
 	-@for dir in $(GIT_DIRS); do\
-	(echo -n "### $$dir: " ;cd $$dir; git branch --show-current); done
+	(echo -n "### $$dir " ;cd $$dir; git branch --show-current); done
 
 ## runs:    update the run scripts for all repos from GIT_DIRS=
 runs:
