@@ -10,11 +10,16 @@ taps=http://taps.lmtgtm.org/lmtslr
 dv=http://taps.lmtgtm.org/dvsearch/                         # DataVerse
 rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
 
-if [ $WORK_LMT == $tap1 ]; then
+w=$(echo $WORK_LMT | cut -d/ -f5)
+
+if [ $w == "work_lmt" ]; then
     taps=$tap1
-else
+elif [ $w == "work_lmt_helpdesk" ]; then
     user=$(echo $WORK_LMT | cut -d/ -f6)
     taps=$tap2/$user
+else
+    echo "User not established"
+    exit 1
 fi
 
 echo "<!-- Using taps=$taps -->"
