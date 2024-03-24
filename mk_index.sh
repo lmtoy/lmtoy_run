@@ -7,7 +7,8 @@
 tap1=http://taps.lmtgtm.org/lmtslr           # /nese/toltec/dataprod_lmtslr/work_lmt
 tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work_lmt_helpdesk/peter
 taps=http://taps.lmtgtm.org/lmtslr
-dv=http://taps.lmtgtm.org/dvsearch/          # DataVerse
+dv=http://taps.lmtgtm.org/dvsearch/                         # DataVerse
+rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
 
 if [ $WORK_LMT == $tap1 ]; then
     taps=$tap1
