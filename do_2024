@@ -1,0 +1,13 @@
+# check the 2024 obsnums in two ways:
+#    1.   what the script generator knows
+#    2.   what the lmtinfo database knows
+
+for pid in $(grep ^2024- comments.txt | tabcols - 1); do
+  echo $pid
+  (cd lmtoy_$pid; ./mk_runs.py -o)
+done
+
+#    bash do_2024 | grep -v ^2024 | tabcols - 1  |  sort -n | uniq > obsnums1.tab
+#    -> 284
+#    DATA_LMT=$DATA_LMT/unity lmtinfo.py grep Science | grep ^2024 | tabcols - 2 | sort -n > obsnums2.tab
+#    -> 308
