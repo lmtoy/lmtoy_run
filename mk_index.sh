@@ -22,7 +22,8 @@ else
     exit 1
 fi
 
-last_obsnum=$(cat $DATA_LMT/last.obsnum)
+last_unity=$(cat $DATA_LMT/last.obsnum)
+last_malt=$(tabcols last100.log 2  | head -1)
 
 echo "<!-- Using taps=$taps -->"
 echo "<html>"
@@ -32,7 +33,9 @@ echo "Index created $(date) (click on column name to sort by that column)"
 echo "<br>"
 echo "<A HREF=$tap1/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
 echo "<br>"
-echo "Last obnum registered on Unity: $last_obsnum"
+echo "Latest obsnum registered on Unity: $last_unity"
+echo "<br>"
+echo "Latest obsnum registered on Malt : $last_malt"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
