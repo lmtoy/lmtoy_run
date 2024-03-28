@@ -22,6 +22,8 @@ else
     exit 1
 fi
 
+last_obsnum=$(cat $DATA_LMT/last.obsnum)
+
 echo "<!-- Using taps=$taps -->"
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
@@ -29,6 +31,8 @@ echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js
 echo "Index created $(date) (click on column name to sort by that column)"
 echo "<br>"
 echo "<A HREF=$tap1/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
+echo "<br>"
+echo "Last obnum registered on Unity: $last"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
