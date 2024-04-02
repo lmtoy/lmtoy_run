@@ -8,7 +8,7 @@
 #
 
 
-2024-S1-MX-2               SEQ - 400Mhz/VLSR?  (2023-S1-UM-16)
+2024-S1-MX-2               SEQ [MH/PT] 400Mhz/nonzero VLSR  (2023-S1-UM-16)
 2024-S1-MX-11              RSR [Alaina] J154506 strong line [complete]
 2024-S1-MX-20              SEQ - NGC4189=d, NGC5347=d, IC3392=d
 2024-S1-MX-22              RSR - HATLAS
@@ -18,7 +18,7 @@
 2024-S1-MX-35              SEQ - TYC_2597_735_1
 2024-S1-SP-5               SEQ - NGC_4038S  [-113109]
 2024-S1-SP-7               RSR -
-2024-S1-UM-1               SEQ - NGC4388 (2023-S1-UM-8)
+2024-S1-UM-1               SEQ [MH/PT] NGC4388 (2023-S1-UM-8)
 2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
 2024-S1-UM-9               RSR [Molly] GoodsN
 2024-S1-US-5               RSR [Molly] C1/C2/...
