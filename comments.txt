@@ -9,6 +9,7 @@
 
 
 2024-S1-MX-2               SEQ [MH/PT] 400Mhz/nonzero VLSR  (2023-S1-UM-16)
+2024-S1-MX-3               RSR Scuba 
 2024-S1-MX-11              RSR [Alaina] J154506 strong line [complete]
 2024-S1-MX-20              SEQ - NGC4189=d, NGC5347=d, IC3392=d
 2024-S1-MX-22              RSR - HATLAS
@@ -32,14 +33,14 @@
 #
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
-2023-S1-MX-41  RSR 	   [molly] V1 submitted (`jun?)
+2023-S1-MX-41  RSR 	   ** [molly] V1 submitted (`jun?)
 2023-S1-MX-46  RSR 	   [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   new (birdies 4096) - 2 banks
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   SEQ - NGC4388 (2024-S1-UM-1)
-2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
-2023-S1-UM-15  SEQ 	   (MarkH/PeterT) HB114_13CO  
+2023-S1-UM-10  RSR 	   ** [caleigh] V1 submitted 26-jun
+2023-S1-UM-15  SEQ 	   ** (MarkH/PeterT) HB114_13CO  
 2023-S1-UM-16  SEQ 	   (MarkH/PeterT) G1.7+3.7-234
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
@@ -51,7 +52,7 @@
 2022S1RSRCommissioning     RSR [peter]
 2022S1SEQUOIACommissioning SEQ [peter]
 #
-2021-S1-MX-3  SEQ          EDGE survey
+2021-S1-MX-3  SEQ          ** EDGE survey 100157-100178
 2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1
 2021-S1-MX-34 RSR       
