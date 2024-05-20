@@ -14,6 +14,7 @@
 2024-S1-MX-20              SEQ - NGC4189=d, NGC5347=d, IC3392=d
 2024-S1-MX-22              RSR - HATLAS
 2024-S1-MX-24              SEQ - Per-emb-2 - narrow line
+2024-S1-MX-26              RSR - 7968-12703 etc.
 2024-S1-MX-32              SEQ - G38.60
 2024-S1-MX-34              RSR - NGC_4449
 2024-S1-MX-35              SEQ - TYC_2597_735_1
