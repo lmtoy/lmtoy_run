@@ -18,6 +18,7 @@
 2024-S1-MX-32              SEQ - G38.60
 2024-S1-MX-34              RSR - NGC_4449
 2024-S1-MX-35              SEQ - TYC_2597_735_1
+2024-S1-MX-37              SEQ - L1157-B1
 2024-S1-SP-5               SEQ - NGC_4038S  [-113109]
 2024-S1-SP-7               RSR -
 2024-S1-UM-1               SEQ [MH/PT] NGC4388 (2023-S1-UM-8)
