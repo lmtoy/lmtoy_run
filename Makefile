@@ -12,6 +12,9 @@ GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
 	lmtoy_2021S1RSRCommissioning \
 	lmtoy_2022S1RSRCommissioning
 
+GIT_DIRS_2000 = \
+        lmtoy_2000-S1-AA-1
+
 GIT_DIRS_2018 = \
 	lmtoy_2018-S1-MU-8  lmtoy_2018-S1-MU-31 lmtoy_2018-S1-MU-45 \
 	lmtoy_2018-S1-MU-46 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-65 \
@@ -59,7 +62,7 @@ help: Makefile
 
 ## git:     ensure all git repos for GIT_DIRS= are present
 git:  pull1
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(if [ ! -d $$dir ]; then git clone $(BASE)/$$dir ; fi); done
 
 pull1:
@@ -68,31 +71,31 @@ pull1:
 ## pull:    git pull    from all repos from GIT_DIRS=
 pull:   pull1
 	@echo -n "### lmtoy_run: "; git pull
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(echo -n "### $$dir " ;cd $$dir; git pull); done
 	@echo Last pull: `date` >> git.log
 
 ## status:  git status -uno  from all repos from GIT_DIRS=
 status:
 	@echo -n "### lmtoy_run: "; git status -uno
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(echo "### $$dir " ;cd $$dir; git status -suno); done
 
 ## log:     git log --pretty=oneline    from all repos from GIT_DIRS=
 log:
 	@echo -n "### lmtoy_run: "; git log --pretty=oneline -1
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(echo "### $$dir " ;cd $$dir; git log --pretty=oneline -1); done
 
 ## branch:  git branch --show-current    from all repos from GIT_DIRS=
 branch:
 	@echo -n "### lmtoy_run: "; git branch --show-current
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(echo -n "### $$dir " ;cd $$dir; git branch --show-current); done
 
 ## runs:    update the run scripts for all repos from GIT_DIRS=
 runs:
-	-@for dir in $(GIT_DIRS); do\
+	-@for dir in $(GIT_DIRS_2000) $(GIT_DIRS); do\
 	(cd $$dir; make runs); done
 
 TAPS = http://taps.lmtgtm.org/lmtslr
