@@ -37,6 +37,7 @@
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
 2023-S1-MX-41  RSR 	   ** [molly] V1 submitted (`jun?)
+2023-S1-MX-42  SEQ         IK_Tau 
 2023-S1-MX-46  RSR 	   [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   new (birdies 4096) - 2 banks
