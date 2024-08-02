@@ -8,7 +8,7 @@
 #
 
 
-2024-S1-MX-2               SEQ [MH/PT] 400Mhz/nonzero VLSR  (2023-S1-UM-16)
+2024-S1-MX-2               SEQ [MH/PT] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16)
 2024-S1-MX-3               RSR [Molly] Scuba - submitting ~jul 20
 2024-S1-MX-11              RSR [Alaina] J154506 strong line [complete]
 2024-S1-MX-20              SEQ - NGC4189=d, NGC5347=d, IC3392=d
@@ -18,7 +18,7 @@
 2024-S1-MX-32              SEQ - G38.60
 2024-S1-MX-34              RSR - NGC_4449
 2024-S1-MX-35              SEQ - TYC_2597_735_1
-2024-S1-MX-37              SEQ - L1157-B1
+2024-S1-MX-37              SEQ L1157-B1
 2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitting ~jul 20
 2024-S1-SP-7               RSR -
 2024-S1-UM-1               SEQ [MH/PT] NGC4388 (2023-S1-UM-8)
