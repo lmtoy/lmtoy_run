@@ -7,8 +7,10 @@ help:
 	@echo WORK_LMT=$(WORK_LMT)
 	@echo Targets in this template in $(PWD)
 	@echo "   runs      - make the run1/run2/... files"
+	@echo "   sbatch2   - run the whole project using sbatch_lmtoy2.sh"
 	@echo "   summary   - update the project summary index"
 	@echo "               https://taps.lmtgtm.org/lmtslr/$(PID)"
+	
 
 
 runs:
@@ -27,6 +29,9 @@ $(PID):
 $(PID)/comments.txt:
 	(cd $(PID); ln -sf $(PWD)/comments.txt; ln -sf README.html index.html; \
 	ln -sf $(WORK_LMT)/lmtoy_run/lmtoy_$(PID))
+
+sbatch2:
+	sbatch_lmtoy2.sh $(PID).run??
 
 summary:
 	@for p in $(PID); do \
