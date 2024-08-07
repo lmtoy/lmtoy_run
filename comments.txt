@@ -25,7 +25,7 @@
 2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
 2024-S1-UM-9               RSR [Molly] GoodsN
 2024-S1-US-5               RSR [Molly] C1/C2/...
-2024-S1-US-16              SEQ A262_1 
+2024-S1-US-16              SEQ A262_1,2,3,4 
 2024-S1-US-20              SEQ - G45.47 (4-mosaic)
 
 2024S1RSRCommissioning     RSR [peter]
@@ -37,7 +37,7 @@
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
 2023-S1-MX-41  RSR 	   ** [molly] V1 submitted (`jun?)
-2023-S1-MX-42  SEQ         IK_Tau 
+2023-S1-MX-42  SEQ         IK_Tau 12CO and 13CO detected
 2023-S1-MX-46  RSR 	   [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   new (birdies 4096) - 2 banks
@@ -59,11 +59,11 @@
 2021-S1-MX-3  SEQ          ** EDGE survey 100157-100178
 2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1
-2021-S1-MX-34 RSR       
-2021-S1-UM-11 RSR       
+2021-S1-MX-34 RSR          G12*,NGP*
+2021-S1-UM-11 RSR          J*.*
 2021-S1-US-3  SEQ          M100
 2021-S1-UM-3  SEQ/Bs       UGCA281
-2021-S1-UM-1  SEQ          BKP7323_CO
+2021-S1-UM-1  SEQ          BKP7323_CO pipeline crash
 #
 #  -- below this not moved over to lmtoy yet, but some where processed
 #
