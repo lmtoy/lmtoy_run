@@ -18,7 +18,7 @@
 2024-S1-MX-32              SEQ [Al] G38.60 not started
 2024-S1-MX-34              1MM - NGC_4449
 2024-S1-MX-35              SEQ [Al] TYC_2597_735_1
-2024-S1-MX-37              SEQ [Al/PT] L1157-B1
+2024-S1-MX-37              SEQ [Al/PT] L1157-B1 (birdies)
 2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 100%
 2024-S1-SP-7               RSR [Al] LH85226
 2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) 100%
@@ -40,7 +40,7 @@
 2023-S1-MX-42  SEQ         [Al] IK_Tau 12CO and 13CO detected
 2023-S1-MX-46  RSR 	   [molly] some detections - V1 submitted 2-may
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
-2023-S1-MX-49  SEQ 	   new (birdies 4096) - 2 banks
+2023-S1-MX-49  SEQ 	   L1157-B1 (birdies 4096) - 2 banks
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
 2023-S1-UM-8   SEQ 	   SEQ - NGC4388 (2024-S1-UM-1)
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
