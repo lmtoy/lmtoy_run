@@ -16,15 +16,16 @@ GIT_DIRS_2000 = \
         lmtoy_2000-S1-AA-1
 
 GIT_DIRS_2018 = \
-	lmtoy_2018-S1-MU-8  lmtoy_2018-S1-MU-31 lmtoy_2018-S1-MU-45 \
-	lmtoy_2018-S1-MU-46 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-65 \
-	lmtoy_2018-S1-MU-66 lmtoy_2018-S1-MU-67
+	lmtoy_2018-S1-MU-1  lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-25 lmtoy_2018-S1-MU-26 \
+	lmtoy_2018-S1-MU-31 lmtoy_2018-S1-MU-45 \
+	lmtoy_2018-S1-MU-46 lmtoy_2018-S1-MU-57  lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-65 \
+	lmtoy_2018-S1-MU-66 lmtoy_2018-S1-MU-67 lmtoy_2018-S1-MU-78 lmtoy_2018-S1-MU-79 
 
 # 	lmtoy_2021S1RSRCommissioning 
 GIT_DIRS_2021 = \
-	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-5 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-34 \
+	lmtoy_2021-S1-MX-3 lmtoy_2021-S1-MX-5 lmtoy_2021-S1-MX-14 lmtoy_2021-S1-MX-26 lmtoy_2021-S1-MX-34 \
 	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3 lmtoy_2021-S1-UM-11 \
-	lmtoy_2021-S1-US-3 \
+	lmtoy_2021-S1-US-3 lmtoy_2021-S1-US-17 lmoty_2021-S1-US-19 
 
 # new
 GIT_DIRS_2023 = \

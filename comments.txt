@@ -15,6 +15,7 @@
 2024-S1-MX-22              RSR [Mo/Al] HATLAS  4/6
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow line
 2024-S1-MX-26              RSR [Mo/Al] nice detections
+2024-S1-MX-30              1MM  only pointing/cal data
 2024-S1-MX-32              SEQ [Al] G38.60 not started
 2024-S1-MX-34              1MM - NGC_4449
 2024-S1-MX-35              SEQ [Al] TYC_2597_735_1
@@ -24,6 +25,7 @@
 2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) 100%
 2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
 2024-S1-UM-9               RSR [Mo/Al] GoodsN   3/4
+2024-S1-UM-11              1MM  only pointing/cal data
 2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
 2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 
 2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic) 
@@ -49,47 +51,71 @@
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
+
+
 #  
 2023S1RSRCommissioning     RSR [peter]
 2023S1SEQUOIACommissioning SEQ [peter]
+2023SequoiaCommissioning   typo - only used for testing
+2023S1MSIP1mmCommissioning
+2023MSIP1mmCommissioning
+
 #
 2022S1RSRCommissioning     RSR [peter]
 2022S1SEQUOIACommissioning SEQ [peter]
+2022S1OOFCommissioning     SEQ OFF maps
+2022S1MSIP1mmCommissioning 1MM
+
+
 #
 2021-S1-MX-3  SEQ          ** EDGE survey 100157-100178
 2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1 (see also 2024-S1-MX-37)
+2021-S1-MX-26 RSR          IRAS* 
 2021-S1-MX-34 RSR          G12*,NGP*
+2021-S1-UM-1  SEQ          BKP7323_CO pipeline crash
+2021-S1-UM-3  SEQ/Bs       UGCA281
 2021-S1-UM-11 RSR          J*.*
 2021-S1-US-3  SEQ          M100
-2021-S1-UM-3  SEQ/Bs       UGCA281
-2021-S1-UM-1  SEQ          BKP7323_CO pipeline crash
+2021-S1-US-17 RSR          J1557+1540 
+2021-S1-US-19 RSR          Cyg_X-1
+
+2021S1SEQUOIACommissioning SEQ just cal
+2021S1RSRCommissioning     RSR just pointings
+2021S1MSIP1mmCommissioning 1MM one cal
+
 #
-#  -- below this not moved over to lmtoy yet, but some where processed
+2020MSIP1mmCommissioning   1MM one pointing/cal
+
 #
-2021-S1-MX-26  RSR         IRAS* 
-2021-S1-US-17  RSR         J1557+1540 
-2021-S1-US-19  RSR         Cyg_X-1 
+2019SEQUOIACommissioning   SEQ  typo, has one pointing/cal
+2019S1SEQUOIACommissioning SEQ
+
 #  
+2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-8   SEQ	   NGC628, NGC5194
-2018S1-MU-8    SEQ  	   (typo for MU-8; patched via lmtinfo.py)
+2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
+2018-S1-MU-25  SEQ/Ps  	   Titan  (186)
+2018-S1-MU-26  RSR     	   Az_G12_26  (206)
+2018-S1-MU-31  SEQ     	   B59  (2) 
 2018-S1-MU-45  SEQ  	   L1157-B1 (see also 2024-S1-MX-37)
 2018-S1-MU-46  SEQ  	   M31
+2018-S1-MU-57  RSR     	   HerBS-195  (12/18)
 2018-S1-MU-64  SEQ  	   SEXTANS-A
 2018-S1-MU-65  SEQ     	   IRAS04166+2706_*
 2018-S1-MU-66  SEQ  	   IRAS*
 2018-S1-MU-67  SEQ     	   M83
-#
-#  and mostly unprocessed 2018 projects
-#
-2018-S1-MU-1   RSR	   IRAS_* (86)
-2018-S1-MU-25  SEQ/Ps  	   Titan  (186)
-2018-S1-MU-26  RSR     	   Az_G12_26  (206)
-2018-S1-MU-31  SEQ     	   B59  (2) 
-2018-S1-MU-57  RSR     	   HerBS-195  (12/18)
-2018-S1-MU-66  SEQ         IRAS*
 2018-S1-MU-78  RSR     	   J*   (31)
 2018-S1-MU-79  SEQ/Ps  	   UM_488,GP_J1448,* (545)
+2018-S1-MU-90  RSR         - only pointing
+
+
+2018S1SequoiaCommissioning  SEQ  1 typo
+2018S1SEQUOIACommissioning  SEQ
+2018S1RSRCommissioning      RSR
+2018ARSRCommissioning       RSR
+
+
 #
 #  the remaining projects have a different structure of their name.
 #  they are all RSR projects, as SEQ was not at LMT yet.
