@@ -23,7 +23,7 @@
 2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 100%
 2024-S1-SP-7               RSR [Al] LH85226
 2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) 100%
-2024-S1-UM-3               SEQ/Ps - Core_41, 42, ...
+2024-S1-UM-3               SEQ/Ps [todo] Core_41, 42, ...
 2024-S1-UM-9               RSR [Mo/Al] GoodsN   3/4
 2024-S1-UM-11              1MM  only pointing/cal data
 2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
@@ -57,8 +57,8 @@
 2023S1RSRCommissioning     RSR [peter]
 2023S1SEQUOIACommissioning SEQ [peter]
 2023SequoiaCommissioning   typo - only used for testing
-2023S1MSIP1mmCommissioning
-2023MSIP1mmCommissioning
+2023S1MSIP1mmCommissioning 1MM
+2023MSIP1mmCommissioning   1MM
 
 #
 2022S1RSRCommissioning     RSR [peter]
@@ -68,13 +68,13 @@
 
 
 #
-2021-S1-MX-3  SEQ          ** EDGE survey 100157-100178
+2021-S1-MX-3  SEQ          [peter] EDGE survey 100157-100178
 2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1 (see also 2024-S1-MX-37)
 2021-S1-MX-26 RSR          IRAS* 
 2021-S1-MX-34 RSR          G12*,NGP*
 2021-S1-UM-1  SEQ          BKP7323_CO pipeline crash
-2021-S1-UM-3  SEQ/Bs       UGCA281
+2021-S1-UM-3  SEQ/Bs       [todo] UGCA281
 2021-S1-UM-11 RSR          J*.*
 2021-S1-US-3  SEQ          M100
 2021-S1-US-17 RSR          J1557+1540 
@@ -95,7 +95,7 @@
 2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-8   SEQ	   NGC628, NGC5194
 2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
-2018-S1-MU-25  SEQ/Ps  	   Titan  (186)
+2018-S1-MU-25  SEQ/Ps  	   [todo] Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
 2018-S1-MU-31  SEQ     	   B59  (2) 
 2018-S1-MU-45  SEQ  	   L1157-B1 (see also 2024-S1-MX-37)
@@ -106,7 +106,7 @@
 2018-S1-MU-66  SEQ  	   IRAS*
 2018-S1-MU-67  SEQ     	   M83
 2018-S1-MU-78  RSR     	   J*   (31)
-2018-S1-MU-79  SEQ/Ps  	   UM_488,GP_J1448,* (545)
+2018-S1-MU-79  SEQ/Ps  	   [todo] UM_488,GP_J1448,* (545)
 2018-S1-MU-90  RSR         - only pointing
 
 
