@@ -27,7 +27,10 @@ GIT_DIRS_2021 = \
 	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3  lmtoy_2021-S1-UM-11 \
 	lmtoy_2021-S1-US-3 lmtoy_2021-S1-US-17 lmtoy_2021-S1-US-19 
 
-# new
+GIT_DIRS_2022 = \
+	lmtoy_2022S1RSRCommissioning \
+        lmtoy_2022S1SEQUOIACommissioning 
+
 GIT_DIRS_2023 = \
 	lmtoy_2023S1RSRCommissioning \
         lmtoy_2023S1SEQUOIACommissioning \
@@ -48,7 +51,7 @@ GIT_DIRS_2024 = \
 	lmtoy_2024-S1-US-5 lmtoy_2024-S1-US-16 lmtoy_2024-S1-US-20
 
 # default, but the YEAR file can override
-GIT_DIRS = $(GIT_DIRS_2024) $(GIT_DIRS_2023)
+GIT_DIRS = $(GIT_DIRS_2024) $(GIT_DIRS_2023) $(GIT_DIRS_2022)
 -include YEAR
 
 .PHONY:  help install build status pull
