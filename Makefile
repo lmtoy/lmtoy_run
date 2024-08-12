@@ -29,7 +29,7 @@ GIT_DIRS_2021 = \
 
 GIT_DIRS_2022 = \
 	lmtoy_2022S1RSRCommissioning \
-        lmtoy_2022S1SEQUOIACommissioning 
+	lmtoy_2022S1SEQUOIACommissioning 
 
 GIT_DIRS_2023 = \
 	lmtoy_2023S1RSRCommissioning \
