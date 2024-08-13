@@ -43,7 +43,7 @@ echo "<A HREF=index.old.html>Previous listing of this file.</A>"
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
-echo "      N"
+echo "      #"
 echo "    </th>"
 echo "    <th>"
 echo "      ProjectID"
@@ -84,7 +84,7 @@ for dir in $*; do
     
     echo '  <tr class="item">'
     echo "    <td>"
-    echo "      $i"
+    echo "      ${i}."
     echo "    </td>"
     
     echo "    <td>"
