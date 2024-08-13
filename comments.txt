@@ -7,6 +7,11 @@
 #  See also:  $LMTOY/etc/ProjectId.csv
 #
 
+#
+2024S1MSIP1mmCommissioning 1MM [peter]
+2024MSIP1mmCommissioning   1MM [peter]  wrong name
+2024S1RSRCommissioning     RSR [peter]
+2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
 
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16)
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
@@ -28,14 +33,15 @@
 2024-S1-UM-11              1MM  only pointing/cal data
 2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
 2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 
-2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic) 
+2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic)
 
-2024S1RSRCommissioning     RSR [peter]
-2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
-2024S1MSIP1mmCommissioning 1MM [peter]
-2024MSIP1mmCommissioning   1MM [peter]  wrong name
+#  
+2023S1RSRCommissioning     RSR [peter]
+2023S1SEQUOIACommissioning SEQ [peter]
+2023SequoiaCommissioning   typo - only used for testing
+2023S1MSIP1mmCommissioning 1MM
+2023MSIP1mmCommissioning   1MM
 
-#
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
 2023-S1-MX-41  RSR 	   [molly] V1 submitted (`jun?)
@@ -52,22 +58,17 @@
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
 
-
-#  
-2023S1RSRCommissioning     RSR [peter]
-2023S1SEQUOIACommissioning SEQ [peter]
-2023SequoiaCommissioning   typo - only used for testing
-2023S1MSIP1mmCommissioning 1MM
-2023MSIP1mmCommissioning   1MM
-
 #
 2022S1RSRCommissioning     RSR [peter]
 2022S1SEQUOIACommissioning SEQ [peter]
 2022S1OOFCommissioning     SEQ OFF maps
 2022S1MSIP1mmCommissioning 1MM
 
-
 #
+2021S1RSRCommissioning     RSR just pointings
+2021S1SEQUOIACommissioning SEQ just cal
+2021S1MSIP1mmCommissioning 1MM one cal
+
 2021-S1-MX-3  SEQ          [peter] EDGE survey 100157-100178
 2021-S1-MX-5  SEQ  	   NGC6946
 2021-S1-MX-14 SEQ	   L1157-B1 (see also 2024-S1-MX-37)
@@ -80,9 +81,6 @@
 2021-S1-US-17 RSR          J1557+1540 
 2021-S1-US-19 RSR          Cyg_X-1
 
-2021S1SEQUOIACommissioning SEQ just cal
-2021S1RSRCommissioning     RSR just pointings
-2021S1MSIP1mmCommissioning 1MM one cal
 
 #
 2020MSIP1mmCommissioning   1MM one pointing/cal
@@ -91,7 +89,12 @@
 2019SEQUOIACommissioning   SEQ  typo, has one pointing/cal
 2019S1SEQUOIACommissioning SEQ
 
-#  
+#
+2018S1RSRCommissioning      RSR
+2018ARSRCommissioning       RSR
+2018S1SequoiaCommissioning  SEQ  1 typo
+2018S1SEQUOIACommissioning  SEQ
+
 2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-8   SEQ	   NGC628, NGC5194
 2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
@@ -108,13 +111,6 @@
 2018-S1-MU-78  RSR     	   J*   (31)
 2018-S1-MU-79  SEQ/Ps  	   [todo] UM_488,GP_J1448,* (545)
 2018-S1-MU-90  RSR         - only pointing
-
-
-2018S1SequoiaCommissioning  SEQ  1 typo
-2018S1SEQUOIACommissioning  SEQ
-2018S1RSRCommissioning      RSR
-2018ARSRCommissioning       RSR
-
 
 #
 #  the remaining projects have a different structure of their name.
