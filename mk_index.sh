@@ -84,6 +84,10 @@ for dir in $*; do
     
     echo '  <tr class="item">'
     echo "    <td>"
+    echo "      $i"
+    echo "    </td>"
+    
+    echo "    <td>"
     echo "      <A HREF=$taps/$pid> $pid</A>"
     echo "    </td>"
 
@@ -105,10 +109,6 @@ for dir in $*; do
     fi
     echo "    <td>"
     echo "      $ns"
-    echo "    </td>"
-    
-    echo "    <td>"
-    echo "      $i"
     echo "    </td>"
     
     echo "    <td>"
