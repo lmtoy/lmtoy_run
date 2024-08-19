@@ -39,7 +39,8 @@ echo "Latest obsnum registered on Unity: $last_unity"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
-echo "<A HREF=index.old.html>Previous listing of this file.</A>"
+echo "<A HREF=index.old.html>Previous listing of this file,</A>"
+echo "<A HREF=index.old>Most recent listing of this file.</A>"
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
