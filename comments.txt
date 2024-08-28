@@ -87,7 +87,7 @@
 
 #
 2019SEQUOIACommissioning   SEQ  typo, has one pointing/cal
-2019S1SEQUOIACommissioning SEQ
+2019S1SEQUOIACommissioning SEQ  pointing
 
 #
 2018S1RSRCommissioning      RSR
