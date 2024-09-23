@@ -26,6 +26,7 @@ last_unity=$(cat $DATA_LMT/last.obsnum)
 last_malt=$(tabcols last100.log 2  | head -1)
 
 echo "<!-- Using taps=$taps -->"
+echo "<!-- created by $0 -->"
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
