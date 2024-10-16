@@ -9,6 +9,7 @@ tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work
 taps=http://taps.lmtgtm.org/lmtslr
 dv=http://taps.lmtgtm.org/dvsearch/                         # DataVerse
 rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
+obs=http://lmtserver.astro.umass.edu/obs                    # observatory calendar
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -37,6 +38,8 @@ echo "<br>"
 echo "Latest obsnum registered on Malt : $last_malt"
 echo "<br>"
 echo "Latest obsnum registered on Unity: $last_unity"
+echo "<br>"
+echo "Observatory calendar: <A HREF=$obs>here</A>"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
