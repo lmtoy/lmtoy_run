@@ -9,6 +9,9 @@ tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work
 taps=http://taps.lmtgtm.org/lmtslr
 dv=http://taps.lmtgtm.org/dvsearch/                         # DataVerse
 rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
+bench1=http://taps.lmtgtm.org/lmtslr/2014ARSRCommissioning/33551/README.html
+bench2=http://taps.lmtgtm.org/lmtslr/2018S1SEQUOIACommissioning/79448/README.html
+bench3=http://taps.lmtgtm.org/lmtslr/2024S1SEQUOIACommissioning/110399/README.html
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -36,6 +39,8 @@ echo "<br>"
 echo "Latest obsnum registered on Malt : $last_malt"
 echo "<br>"
 echo "Latest obsnum registered on Unity: $last_unity"
+echo "<br>"
+echo "LMTOY benchmarks: <A HREF=$bench1>bench1</A>, <A HREF=$bench2>bench2</A>, <A HREF=$bench3>bench3</A>"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"
