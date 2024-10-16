@@ -12,6 +12,7 @@ rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
 bench1=http://taps.lmtgtm.org/lmtslr/2014ARSRCommissioning/33551/README.html
 bench2=http://taps.lmtgtm.org/lmtslr/2018S1SEQUOIACommissioning/79448/README.html
 bench3=http://taps.lmtgtm.org/lmtslr/2024S1SEQUOIACommissioning/110399/README.html
+obs=http://lmtserver.astro.umass.edu/obs                    # observatory calendar
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -25,10 +26,11 @@ else
     exit 1
 fi
 
-last_unity=$(cat $DATA_LMT/last.obsnum)
+last_unity=$(cat $DATA_LMT/last.obsnum | tail -1)
 last_malt=$(tabcols last100.log 2  | head -1)
 
 echo "<!-- Using taps=$taps -->"
+echo "<!-- created by $0 -->"
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
 echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
@@ -41,6 +43,8 @@ echo "<br>"
 echo "Latest obsnum registered on Unity: $last_unity"
 echo "<br>"
 echo "LMTOY benchmarks: <A HREF=$bench1>bench1</A>, <A HREF=$bench2>bench2</A>, <A HREF=$bench3>bench3</A>"
+echo "<br>"
+echo "<A HREF=$obs>Observatory Calendar</A>"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
 echo "<br>"

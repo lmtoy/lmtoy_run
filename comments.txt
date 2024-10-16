@@ -15,7 +15,7 @@
 
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16)
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
-2024-S1-MX-11              RSR [Al] J154506 strong line [complete]
+2024-S1-MX-11              RSR [Al] J154506 strong line [complete] 100%
 2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   3/10 done
 2024-S1-MX-22              RSR [Mo/Al] HATLAS  4/6
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow line
@@ -75,7 +75,7 @@
 2021-S1-MX-26 RSR          IRAS* 
 2021-S1-MX-34 RSR          G12*,NGP*
 2021-S1-UM-1  SEQ          BKP7323_CO pipeline crash
-2021-S1-UM-3  SEQ/Bs       [todo] UGCA281
+2021-S1-UM-3  SEQ/Bs       UGCA281
 2021-S1-UM-11 RSR          J*.*
 2021-S1-US-3  SEQ          M100
 2021-S1-US-17 RSR          J1557+1540 
