@@ -28,6 +28,7 @@ $(PID):
 
 $(PID)/comments.txt:
 	(cd $(PID); ln -sf $(PWD)/comments.txt; ln -sf README.html index.html; \
+	ln -s ../lmtoy_run/sorttable.js; \
 	ln -sf $(WORK_LMT)/lmtoy_run/lmtoy_$(PID))
 
 sbatch2:
