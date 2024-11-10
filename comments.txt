@@ -16,6 +16,7 @@
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16)
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
 2024-S1-MX-11              RSR [Al] J154506 strong line [complete] 100%
+2024-S1-MX-17              RSR -new-
 2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   3/10 done
 2024-S1-MX-22              RSR [Mo/Al] HATLAS  4/6
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow line
