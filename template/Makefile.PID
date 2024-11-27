@@ -48,10 +48,13 @@ q:
 
 
 new:
-	source_obsnum.sh $(PID)
+	@source_obsnum.sh $(PID)
 
 science:
 	lmtinfo.py grep $(PID) Science
+
+lmtinfo:
+	lmtinfo.py grep $(PID) | tac > lmtinfo.txt
 
 lmtinfo.txt:
 	lmtinfo.py grep $(PID) | tac > lmtinfo.txt
