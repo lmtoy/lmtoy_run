@@ -13,6 +13,7 @@ bench1=http://taps.lmtgtm.org/lmtslr/2014ARSRCommissioning/33551/README.html
 bench2=http://taps.lmtgtm.org/lmtslr/2018S1SEQUOIACommissioning/79448/README.html
 bench3=http://taps.lmtgtm.org/lmtslr/2024S1SEQUOIACommissioning/110399/README.html
 obs=http://lmtserver.astro.umass.edu/obs                    # observatory calendar
+url1=https://www.kryogenix.org/code/browser/sorttable/sorttable.js     # remote version
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -33,7 +34,7 @@ echo "<!-- Using taps=$taps -->"
 echo "<!-- created by $0 -->"
 echo "<html>"
 echo '<H1> Progress on SL pipeline data reduction </H1>'
-echo '<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>'
+echo '<script src="sorttable.js"></script>'
 echo "Index created $(date) (click on column name to sort by that column)"
 echo "<br>"
 echo "<A HREF=$tap1/lmtoy_run/last100.html>Latest 100 obsnums from malt available as lightweight TAPs. </A>"
