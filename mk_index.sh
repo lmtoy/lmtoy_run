@@ -8,6 +8,7 @@ tap1=http://taps.lmtgtm.org/lmtslr           # /nese/toltec/dataprod_lmtslr/work
 tap2=http://taps.lmtgtm.org/lmthelpdesk      # /nese/toltec/dataprod_lmtslr/work_lmt_helpdesk/peter
 taps=http://taps.lmtgtm.org/lmtslr
 dv=http://taps.lmtgtm.org/dvsearch/                         # DataVerse
+wr=http://taps.lmtgtm.org/pipeline_web                      # webrun interface to pipeline
 rss=http://lmtserver.astro.umass.edu/rss/lmtrss.html        # LMT status (Kamal)
 bench1=http://taps.lmtgtm.org/lmtslr/2014ARSRCommissioning/33551/README.html
 bench2=http://taps.lmtgtm.org/lmtslr/2018S1SEQUOIACommissioning/79448/README.html
@@ -48,6 +49,8 @@ echo "<br>"
 echo "<A HREF=$obs>Observatory Calendar</A>"
 echo "<br>"
 echo "<A HREF=$dv>LMT Dataverse archive access</A>"
+echo "<br>"
+echo "<A HREF=$dv>Pipeline Re-run (experimental)</A>"
 echo "<br>"
 echo "<A HREF=index.old.html>Previous listing of this file,</A>"
 echo "<A HREF=index.old>Most recent listing of this file.</A>"
