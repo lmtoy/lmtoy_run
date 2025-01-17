@@ -43,6 +43,9 @@ echo "<A HREF=index.old.html>Previous listing of this file.</A>"
 echo '<table border=1 class="sortable">'
 echo '  <tr class="item">'
 echo "    <th>"
+echo "      N"
+echo "    </th>"
+echo "    <th>"
 echo "      ProjectID"
 echo "    </th>"
 echo "    <th>"
@@ -69,7 +72,9 @@ echo "    </th>"
 echo "  </tr>"
 
 #   loop over each command line argument (the lmtoy_PID's)
+n=0
 for dir in $*; do
+    ((n++))
     pid=$(echo $dir|sed s/lmtoy_//)
     wdir=$WORK_LMT/$pid
 
