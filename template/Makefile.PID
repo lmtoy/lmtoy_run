@@ -28,6 +28,7 @@ $(PID):
 
 $(PID)/comments.txt:
 	(cd $(PID); ln -sf $(PWD)/comments.txt; ln -sf README.html index.html; \
+	ln -s ../lmtoy_run/sorttable.js; \
 	ln -sf $(WORK_LMT)/lmtoy_run/lmtoy_$(PID))
 
 sbatch2:
@@ -47,7 +48,19 @@ q:
 
 
 new:
-	source_obsnum.sh $(PID)
+	@source_obsnum.sh $(PID)
+
+science:
+	lmtinfo.py grep $(PID) Science
+
+lmtinfo:
+	lmtinfo.py grep $(PID) | tac > lmtinfo.txt
 
 lmtinfo.txt:
 	lmtinfo.py grep $(PID) | tac > lmtinfo.txt
+
+# attempt to create an Instrument/Obsgoal value
+IO: lmtinfo.txt
+	grep Science lmtinfo.txt  | tabcols - 3,5 | sort | uniq
+
+

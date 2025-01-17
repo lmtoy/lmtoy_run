@@ -10,12 +10,16 @@ BASE  = https://github.com/lmtoy
 GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2014ARSRCommissioning \
 	lmtoy_2021S1RSRCommissioning \
-	lmtoy_2022S1RSRCommissioning 
 
 GIT_DIRS_2000 = \
         lmtoy_2000-S1-AA-1
 
+#2018S1RSRCommissioning
+#2018ARSRCommissioning
+#2018S1SEQUOIACommissioning
+
 GIT_DIRS_2018 = \
+        lmtoy_2018S1SEQUOIACommissioning \
 	lmtoy_2018-S1-MU-1  lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-25 lmtoy_2018-S1-MU-26 \
 	lmtoy_2018-S1-MU-31 lmtoy_2018-S1-MU-45 \
 	lmtoy_2018-S1-MU-46 lmtoy_2018-S1-MU-57 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-65 \
@@ -43,8 +47,8 @@ GIT_DIRS_2024 = \
 	lmtoy_2024S1MSIP1mmCommissioning \
 	lmtoy_2024S1RSRCommissioning \
 	lmtoy_2024S1SEQUOIACommissioning \
-	lmtoy_2024-S1-MX-2 lmtoy_2024-S1-MX-3 \
-	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-20 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-24 \
+	lmtoy_2024-S1-MX-2 lmtoy_2024-S1-MX-3 lmtoy_2024-S1-MX-5 \
+	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-17 lmtoy_2024-S1-MX-20 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-24 \
         lmtoy_2024-S1-MX-26 lmtoy_2024-S1-MX-32 lmtoy_2024-S1-MX-34 lmtoy_2024-S1-MX-35 lmtoy_2024-S1-MX-37 \
 	lmtoy_2024-S1-SP-5 lmtoy_2024-S1-SP-7 \
 	lmtoy_2024-S1-UM-1 lmtoy_2024-S1-UM-3 lmtoy_2024-S1-UM-9 \
