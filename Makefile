@@ -1,4 +1,4 @@
-#   manage the script generators
+#   manage the script generators, also note the YEAR file for local deviations
 
 # where they are stored (used to be https://github.com/teuben)
 BASE  = https://github.com/lmtoy
