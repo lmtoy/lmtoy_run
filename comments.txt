@@ -32,8 +32,8 @@
 2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) 100%
 2024-S1-UM-3               SEQ/Ps [todo] Core_41, 42, ...
 2024-S1-UM-9               RSR [Mo/Al] GoodsN   3/4
-2024-S1-UM-11              1MM  only pointing/cal data
-2024-S1-US-3               1MM Taurus mapping
+2024-S1-UM-11              1MM/Ps - QP183+05, PJ1138
+2024-S1-US-3               1MM/Map - Taurus mapping
 2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
 2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 
 2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic)
