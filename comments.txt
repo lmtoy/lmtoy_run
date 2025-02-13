@@ -35,7 +35,8 @@
 2024-S1-UM-11              1MM/Ps - QP183+05, PJ1138 - difficult tuning?
 2024-S1-US-3               1MM/Map - Taurus - CO(2-1) ok, lots birdies
 2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
-2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 
+2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4
+2024-S1-US-17              RSR 20010800
 2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic)
 
 #  

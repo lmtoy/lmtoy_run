@@ -52,7 +52,7 @@ GIT_DIRS_2024 = \
         lmtoy_2024-S1-MX-26 lmtoy_2024-S1-MX-32 lmtoy_2024-S1-MX-34 lmtoy_2024-S1-MX-35 lmtoy_2024-S1-MX-37 \
 	lmtoy_2024-S1-SP-5 lmtoy_2024-S1-SP-7 \
 	lmtoy_2024-S1-UM-1 lmtoy_2024-S1-UM-3 lmtoy_2024-S1-UM-9 lmtoy_2024-S1-UM-11 \
-	lmtoy_2024-S1-US-3 lmtoy_2024-S1-US-5 lmtoy_2024-S1-US-16 lmtoy_2024-S1-US-20
+	lmtoy_2024-S1-US-3 lmtoy_2024-S1-US-5 lmtoy_2024-S1-US-16 lmtoy_2024-S1-US-17 lmtoy_2024-S1-US-20
 
 # default, but the YEAR file can override
 GIT_DIRS = $(GIT_DIRS_2024) $(GIT_DIRS_2023) $(GIT_DIRS_2022)
