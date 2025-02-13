@@ -1,0 +1,5 @@
+#  <obsnum>   <comment>     # <SLpipeline args>
+#123456    QAFAIL
+#123456__1       extra bad beam     # pix_list=-4,-13,14,15
+#123456__0       standard           # pix_list=-13
+#
