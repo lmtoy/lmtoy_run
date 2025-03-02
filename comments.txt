@@ -13,7 +13,7 @@
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
 
-2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16)
+2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16) [published]
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
 2024-S1-MX-5               SEQ -new-
 2024-S1-MX-11              RSR [Al] J154506 strong line [complete] 100%
@@ -57,7 +57,7 @@
 2023-S1-UM-8   SEQ 	   SEQ - NGC4388 (2024-S1-UM-1)
 2023-S1-UM-10  RSR 	   [caleigh] V1 submitted 26-jun
 2023-S1-UM-15  SEQ 	   (MarkH/PeterT) HB114_13CO  
-2023-S1-UM-16  SEQ 	   (MarkH/PeterT) G1.7+3.7-234  (see also 2024-S1-MX-2)
+2023-S1-UM-16  SEQ 	   (MarkH/PeterT) G1.7+3.7-234  (see also 2024-S1-MX-2) [published]
 2023-S1-US-8   RSR 	   [caleigh] V1 submitted ~19-jul
 2023-S1-US-17  RSR 	   [caleigh] line near 104 GHz - V1 submitted
 2023-S1-US-18  RSR         [caleigh] V1 submitted ~20-apr
@@ -100,7 +100,7 @@
 2018S1SEQUOIACommissioning  SEQ
 
 2018-S1-MU-1   RSR	   IRAS_* (86)
-2018-S1-MU-8   SEQ	   NGC628, NGC5194
+2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published]
 2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
 2018-S1-MU-25  SEQ/Ps  	   [todo] Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
