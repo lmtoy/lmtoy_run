@@ -46,7 +46,9 @@ index:
 q:
 	squeue -u lmtslr_umass_edu | awk '{print NR-1,$$0}'
 
-
+check:
+	@source_obsnum.sh $(PID) > check.py
+	python check.py
 new:
 	@source_obsnum.sh $(PID)
 
