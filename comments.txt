@@ -24,7 +24,7 @@
 2024-S1-MX-26              RSR [Mo/Al] 100% - nice detections
 2024-S1-MX-30              1MM  only pointing/cal data
 2024-S1-MX-32              SEQ [Al] G38.60 not started
-2024-S1-MX-34              1MM - NGC_4449 - no signal yet
+2024-S1-MX-34              1MM - NGC_4449 - some signal 
 2024-S1-MX-35              SEQ [Al] TYC_2597_735_1
 2024-S1-MX-37              SEQ [Al/PT] L1157-B1 (birdies)
 2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 100%
