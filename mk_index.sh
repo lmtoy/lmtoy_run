@@ -94,7 +94,7 @@ for dir in $*; do
 
     comments=$(grep -w ^$pid comments.txt | sed s/$pid//)
     ns=TBD
-    ns=$(grep _s= $dir/*run1a | tabcols - 3 | sed s/_s=// | sort | uniq | wc -l)
+    ns=$(grep _s= $dir/*run1a | tabcols - 4 | sed s/_s=// | sort | uniq | wc -l)
     
     echo '  <tr class="item">'
     echo "    <td>"
