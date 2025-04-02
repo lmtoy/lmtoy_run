@@ -81,6 +81,9 @@ echo "    <th>"
 echo "      __last_pipeline_date__"
 echo "    </th>"
 echo "    <th>"
+echo "      Archived"
+echo "    </th>"
+echo "    <th>"
 echo "      comments"
 echo "    </th>"
 echo "  </tr>"
@@ -144,6 +147,12 @@ for dir in $*; do
     echo "    <td>"
     echo "      $date"
     echo "    </td>"
+
+    echo "    <td>"
+    echo "      -"
+    echo "    </td>"
+
+
 
     echo "    <td>"
     echo "      $comments"
