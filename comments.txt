@@ -13,6 +13,7 @@
 2024S1RSRCommissioning     RSR [peter]
 2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
 
+2024-S1-DX-1               RSR DDT project
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16) [published]
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
 2024-S1-MX-5               SEQ -new-
