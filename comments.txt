@@ -11,7 +11,7 @@
 2024S1MSIP1mmCommissioning 1MM [peter]
 2024MSIP1mmCommissioning   1MM [peter]  wrong name
 2024S1RSRCommissioning     RSR [peter]
-2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
+2024S1SEQUOIACommissioning SEQ [peter]  bench3 } also Ps/Bs tests
 
 2024-S1-DX-1               RSR DDT project
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16) [published]
@@ -98,7 +98,7 @@
 2018S1RSRCommissioning      RSR
 2018ARSRCommissioning       RSR
 2018S1SequoiaCommissioning  SEQ  1 typo
-2018S1SEQUOIACommissioning  SEQ
+2018S1SEQUOIACommissioning  SEQ  bench2
 
 2018-S1-MU-1   RSR	   IRAS_* (86)
 2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published] [archived]
@@ -122,4 +122,5 @@
 #  they are all RSR projects, as SEQ was not at LMT yet.
 #  There are about 40 of these projects.
 #
+2014ARSRCommissioning   RSR   bench1
 2014AYUNM044   RSR         used in a paper
