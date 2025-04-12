@@ -97,8 +97,8 @@ for dir in $*; do
     ((i++))
     pid=$(echo $dir|sed s/lmtoy_//)
     wdir=$WORK_LMT/$pid
-    done=$(cd $dir; make done)
-    archived=$(cd $dir; make archived) 
+    done=$(cd $dir;     make --no-print-directory done)
+    archived=$(cd $dir; make --no-print-directory archived) 
 
     comments=$(grep -w ^$pid comments.txt | sed s/$pid//)
     ns=TBD
