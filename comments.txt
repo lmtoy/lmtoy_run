@@ -101,7 +101,7 @@
 2018S1SEQUOIACommissioning  SEQ  bench2
 
 2018-S1-MU-1   RSR	   IRAS_* (86)
-2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published] [archived]
+2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published]
 2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
 2018-S1-MU-25  SEQ/Ps  	   [todo] Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
