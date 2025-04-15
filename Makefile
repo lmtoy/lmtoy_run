@@ -77,6 +77,8 @@ git:  pull1
 
 pull1:
 	git pull
+	@echo "Also consider 'make pull' to update all script generators"
+	@echo "Or 'make status' to query their status"
 
 ## pull:    git pull    from all repos from GIT_DIRS=
 pull:   pull1
