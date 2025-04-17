@@ -33,7 +33,8 @@ GIT_DIRS_2021 = \
 
 GIT_DIRS_2022 = \
 	lmtoy_2022S1RSRCommissioning \
-	lmtoy_2022S1SEQUOIACommissioning 
+	lmtoy_2022S1SEQUOIACommissioning \
+	lmtoy_2022S1MSIP1mmCommissioning
 
 GIT_DIRS_2023 = \
 	lmtoy_2023S1RSRCommissioning \
@@ -79,6 +80,7 @@ pull1:
 	git pull
 	@echo "Also consider 'make pull' to update all script generators"
 	@echo "Or 'make status' to query their status"
+	@echo "Or 'make branch' to query what branch you are on"
 
 ## pull:    git pull    from all repos from GIT_DIRS=
 pull:   pull1
