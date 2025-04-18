@@ -1,5 +1,89 @@
 #  <obsnum>   <comment>     # <SLpipeline args>
-#123456    QAFAIL
-#123456__1       extra bad beam     # pix_list=-4,-13,14,15
-#123456__0       standard           # pix_list=-13
-#
+# QAFAILS / reobserve
+  127719     QAFAIL        #qagrade=-2
+  127720     QAFAIL        #qagrade=-2
+  127721     QAFAIL        #qagrade=-2
+  127723     reobserve, do not remove #qagrade=-2
+  127724     QAFAIL        #qagrade=-2
+  127725     QAFAIL        #qagrade=-2
+  127727     QAFAIL        #qagrade=-2
+  127728     QAFAIL        #qagrade=-2
+  127729     QAFAIL        #qagrade=-2
+  127803     reobserve, do not remove #qagrade=-2
+  127816     QAFAIL        #qagrade=-2
+  127346     reobserve, only one usable band 2 #qagrade=-2
+
+# removing bands with a single thing remaining
+  127341     REMOVED BAD C/B, 3/3 #badcb=3/3, qagrade=3
+  127347     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3 
+  127350     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127355     REMOVED BAD C/B, 0/0, 3/0 #badcb=0/0,3/0, qagrade=3
+  127407     REMOVED BAD C/B  3/0 #badcb=3/0, qagrade=3
+  127408     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127413     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127415     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127422     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127428     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127520     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127524     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127525     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127804     REMOVED BAD C/B, 3/5 #badcb=3/5, qagrade=3  
+  127808     REMOVED BAD C/B, 3/0 #badcb=3/0, qagrade=3
+  127805     REMOVED BAD C/B, 3/5 #badcb=3/5, qagrade=3
+  127811     REMOVED BAD C/B, 3/3 #badcb=3/3, qagrade=3
+  127824     REMOVED BAD C/B, 3/3 #badcb=3/0, qagrade=3
+  127826     REMOVED BAD C/B, 3/3 #badcb=3/0, qagrade=3
+  128425     REMOVED BAD C/B, 1/0 #badcb=1/0, qagrade=3  
+  128427     REMOVED BAD C/B, 0/1 #badcb=1/0, qagrade=3
+  128430     REMOVED BAD C/B, 1/0, 3/0 #badcb=1/0,3/0, qagrade=3
+  128814     REMOVED BAD C/B, 1/0  #badcb=1/0, qagrade=3
+  128816     REMOVED BAD C/B  3/5 #badcb=3/5, qagrade=3
+  128819     REMOVED BAD C/B  3/0 #badcb=3/0, qagrade=3
+  128820     REMOVED BAD C/B  3/3 #badcb=3/3, qagrade=3
+  128426     REMOVED BAD C/B  1/0 #badcb=1/0, qagrade=3
+  131754     REMOVED BAD C/B  3/0 #badcb=3/0, qagrade=3 
+
+# perfect
+  127342  #qagrade=3
+  127343  #qagrade=3
+  127349  #qagrade=3
+  127345  #qagrade=3
+  127351  #qagrade=3
+  127354  #qagrade=3
+  127356  #qagrade=3
+  127409  #qagrade=3
+  127411  #qagrade=3
+  127412  #qagrade=3
+  127416  #qagrade=3
+  127417  #qagrade=3
+  127423  #qagrade=3
+  127424  #qagrade=3
+  127426  #qagrade=3
+  127427  #qagrade=3 
+  127519  #qagrade=3
+  127521  #qagrade=3
+  127523  #qagrade=3
+  127807  #qagrade=3
+  127809  #qagrade=3
+  127812  #qagrade=3
+  127813  #qagrade=3
+  127814  #qagrade=3
+  127817  #qagrade=3
+  127818  #qagrade=3
+  127820  #qagrade=3
+  127821  #qagrade=3 
+  127822  #qagrade=3
+  127825  #qagrade=3
+  128429  #qagrade=3
+  128431  #qagrade=3
+  128814  #qagrade=3
+  128815  #qagrade=3
+  128818  #qagrade=3
+  131753  #qagrade=3
+  131755  #qagrade=3
+  131757  #qagrade=3
+  131758  #qagrade=3
+  131759  #qagrade=3
+  131761  #qagrade=3
+  131762  #qagrade=3
+  131763  #qagrade=3
