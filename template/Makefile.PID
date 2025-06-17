@@ -1,17 +1,21 @@
+# -*- Makefile -*-
+
 # normally called from a Makefile, this file lives in lmtoy_run/template
 
 include PID
 
+# default session name
+PIS=PL1
+
 help:
 	@echo PID=$(PID)
+	@echo PIS=$(PIS)
 	@echo WORK_LMT=$(WORK_LMT)
 	@echo Targets in this template in $(PWD)
 	@echo "   runs      - make the run1/run2/... files"
 	@echo "   sbatch2   - run the whole project using sbatch_lmtoy2.sh"
 	@echo "   summary   - update the project summary index"
 	@echo "               https://taps.lmtgtm.org/lmtslr/$(PID)"
-	
-
 
 runs:
 	./mk_runs.py
@@ -66,3 +70,7 @@ IO: lmtinfo.txt
 	grep Science lmtinfo.txt  | tabcols - 3,5 | sort | uniq
 
 
+# clone a session, normally used for pipeline level 1 products
+session:
+	@echo "Session-$(PIS) will be created"
+	mk_session.sh $(PIS)
