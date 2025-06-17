@@ -338,6 +338,7 @@ suggestions and git flow references.
 
          git comment -m "my changes bla bla"  comments.txt mk_runs.py
 
+Note those who want to directly submit into the scripts, need to be on https://github.com/orgs/lmtoy/people
 
 
 ### Master Pipeliner

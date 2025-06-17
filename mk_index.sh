@@ -81,6 +81,9 @@ echo "    <th>"
 echo "      __last_pipeline_date__"
 echo "    </th>"
 echo "    <th>"
+echo "      Done"
+echo "    </th>"
+echo "    <th>"
 echo "      Archived"
 echo "    </th>"
 echo "    <th>"
@@ -94,6 +97,8 @@ for dir in $*; do
     ((i++))
     pid=$(echo $dir|sed s/lmtoy_//)
     wdir=$WORK_LMT/$pid
+    done=$(cd $dir;     make --no-print-directory done)
+    archived=$(cd $dir; make --no-print-directory archived) 
 
     comments=$(grep -w ^$pid comments.txt | sed s/$pid//)
     ns=TBD
@@ -149,7 +154,11 @@ for dir in $*; do
     echo "    </td>"
 
     echo "    <td>"
-    echo "      -"
+    echo "      $done"
+    echo "    </td>"
+
+    echo "    <td>"
+    echo "      $archived"
     echo "    </td>"
 
 

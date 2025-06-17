@@ -6,38 +6,40 @@
 #
 #  See also:  $LMTOY/etc/ProjectId.csv
 #
+#  the corresponding DA spreadsheet is here:
+#  https://docs.google.com/spreadsheets/d/13LE4puKcaN8bne2DB8WiSjwKk59bQ8-V7ykEVhavShE/edit?gid=0#gid=0
 
 #
 2024S1MSIP1mmCommissioning 1MM [peter]
 2024MSIP1mmCommissioning   1MM [peter]  wrong name
 2024S1RSRCommissioning     RSR [peter]
-2024S1SEQUOIACommissioning SEQ [peter]  also Ps/Bs testing
+2024S1SEQUOIACommissioning SEQ [peter]  bench3 } also Ps/Bs tests
 
 2024-S1-DX-1               RSR DDT project
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16) [published]
-2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20
+2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20 [completed]
 2024-S1-MX-5               SEQ -new-
-2024-S1-MX-11              RSR [Al] J154506 strong line [complete] 100%
+2024-S1-MX-11              RSR [Al] J154506 strong line [completed]
 2024-S1-MX-17              RSR -new-
-2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   3/10 done
-2024-S1-MX-22              RSR [Mo/Al] HATLAS  4/6
-2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow line
+2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   [completed]
+2024-S1-MX-22              RSR [Mo/Al] HATLAS  [completed]
+2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow HC3N line [completed]
 2024-S1-MX-26              RSR [Mo/Al] 100% - nice detections
 2024-S1-MX-30              1MM  only pointing/cal data
 2024-S1-MX-32              SEQ [Al] G38.60 not started
 2024-S1-MX-34              1MM - NGC_4449 - some signal 
 2024-S1-MX-35              SEQ [Al] TYC_2597_735_1
 2024-S1-MX-37              SEQ [Al/PT] L1157-B1 (birdies)
-2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 100%
+2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 [completed]
 2024-S1-SP-7               RSR [Al] LH85226
-2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) 100%
-2024-S1-UM-3               SEQ/Ps [todo] Core_41, 42, ...
-2024-S1-UM-9               RSR [Mo/Al] GoodsN   3/4
+2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) [completed]
+2024-S1-UM-3               SEQ/Ps [PT/MH] Core_41, 42, ... [completed]
+2024-S1-UM-9               RSR [Mo/Al] GoodsN   [completed]
 2024-S1-UM-11              1MM/Ps - QP183+05, PJ1138 - difficult tuning?
 2024-S1-US-3               1MM/Map - Taurus - CO(2-1) ok, lots birdies
-2024-S1-US-5               RSR [Mo/Al] C1/C2/...  8/14
+2024-S1-US-5               RSR [Mo/Al] C1/C2/...  [completed]
 2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4
-2024-S1-US-17              RSR 20010800
+2024-S1-US-17              RSR 20010800 [completed]
 2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic)
 
 #  
@@ -51,7 +53,7 @@
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
 2023-S1-MX-41  RSR 	   [molly] V1 submitted (`jun?)
 2023-S1-MX-42  SEQ         [Al] IK_Tau 12CO and 13CO detected
-2023-S1-MX-46  RSR 	   [alaina] 100% - some detections - V1 2-may  V2: 18-dec 
+2023-S1-MX-46  RSR 	   [alaina] some detections - V1 2-may  V2: 18-dec [completed]
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   L1157-B1 (birdies 4096) - 2 banks
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
@@ -98,10 +100,10 @@
 2018S1RSRCommissioning      RSR
 2018ARSRCommissioning       RSR
 2018S1SequoiaCommissioning  SEQ  1 typo
-2018S1SEQUOIACommissioning  SEQ
+2018S1SEQUOIACommissioning  SEQ  bench2
 
 2018-S1-MU-1   RSR	   IRAS_* (86)
-2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published] [archived]
+2018-S1-MU-8   SEQ	   NGC628, NGC5194 [published]
 2018S1-MU-8    SEQ  	   - (typo for MU-8; patched via lmtinfo.py)
 2018-S1-MU-25  SEQ/Ps  	   [todo] Titan  (186)
 2018-S1-MU-26  RSR     	   Az_G12_26  (206)
@@ -122,4 +124,5 @@
 #  they are all RSR projects, as SEQ was not at LMT yet.
 #  There are about 40 of these projects.
 #
+2014ARSRCommissioning   RSR   bench1
 2014AYUNM044   RSR         used in a paper

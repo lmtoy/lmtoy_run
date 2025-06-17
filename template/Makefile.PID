@@ -65,6 +65,12 @@ lmtinfo:
 lmtinfo.txt:
 	lmtinfo.py grep $(PID) | tac > lmtinfo.txt
 
+done:
+	@echo $(DONE)
+
+archived:
+	@echo $(ARCHIVED)
+
 # attempt to create an Instrument/Obsgoal value
 IO: lmtinfo.txt
 	grep Science lmtinfo.txt  | tabcols - 3,5 | sort | uniq
