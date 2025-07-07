@@ -21,6 +21,7 @@
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20 [completed] PI workshop
 2024-S1-MX-11              RSR [Al] J154506 strong line [completed]
 2024-S1-MX-17              RSR -new-
+2024-S1-MX-17              RSR -new- Virgo_Southern_Filament 
 2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   [completed]
 2024-S1-MX-22              RSR [Mo/Al] HATLAS  [completed] PI workshop
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow HC3N line [completed]

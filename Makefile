@@ -3,27 +3,33 @@
 # where they are stored (used to be https://github.com/teuben)
 BASE  = https://github.com/lmtoy
 
-
-# missing:   2018-S1-MU-31
+# toy project
+GIT_DIRS_2000 = \
+        lmtoy_2000-S1-AA-1
 
 # old
 GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2014ARSRCommissioning \
 	lmtoy_2021S1RSRCommissioning \
+# 2998 2015ARSRCommissioning
+# 4089 2016ARSRCommissioning
 
-GIT_DIRS_2000 = \
-        lmtoy_2000-S1-AA-1
+#  552 2018ARSRCommissioning
+# 1904 2018S1RSRCommissioning
 
-#2018S1RSRCommissioning
-#2018ARSRCommissioning
-#2018S1SEQUOIACommissioning
 
 GIT_DIRS_2018 = \
         lmtoy_2018S1SEQUOIACommissioning \
 	lmtoy_2018-S1-MU-1  lmtoy_2018-S1-MU-8 lmtoy_2018-S1-MU-25 lmtoy_2018-S1-MU-26 \
 	lmtoy_2018-S1-MU-31 lmtoy_2018-S1-MU-45 \
 	lmtoy_2018-S1-MU-46 lmtoy_2018-S1-MU-57 lmtoy_2018-S1-MU-64 lmtoy_2018-S1-MU-65 \
-	lmtoy_2018-S1-MU-66 lmtoy_2018-S1-MU-67 lmtoy_2018-S1-MU-78 lmtoy_2018-S1-MU-79 
+	lmtoy_2018-S1-MU-66 lmtoy_2018-S1-MU-67 lmtoy_2018-S1-MU-78 lmtoy_2018-S1-MU-79
+
+#    110 2019S1SEQUOIACommissioning
+#      2 2019SEQUOIACommissioning
+
+#    195 2021S1RSRCommissioning
+#     49 2021S1SEQUOIACommissioning
 
 # 	lmtoy_2021S1RSRCommissioning 
 GIT_DIRS_2021 = \
@@ -31,10 +37,25 @@ GIT_DIRS_2021 = \
 	lmtoy_2021-S1-UM-1 lmtoy_2021-S1-UM-3  lmtoy_2021-S1-UM-11 \
 	lmtoy_2021-S1-US-3 lmtoy_2021-S1-US-17 lmtoy_2021-S1-US-19 
 
+#=  1706 2022S1MSIP1mmCommissioning
+#     30 2022S1OOFCommissioning
+#    748 2022S1RSRCommissioning
+#=  2901 2022S1SEQUOIACommissioning
+#    263 2022S1VLBI1mmCommissioning
+#    103 2022VLBI1mmCommissioning
+
 GIT_DIRS_2022 = \
 	lmtoy_2022S1RSRCommissioning \
 	lmtoy_2022S1SEQUOIACommissioning \
 	lmtoy_2022S1MSIP1mmCommissioning
+
+#    294 2023MSIP1mmCommissioning
+#     76 2023S1MSIP1mmCommissioning
+#   2188 2023S1RSRCommissioning
+#    739 2023S1SEQUOIACommissioning
+#    238 2023S1VLBI1mmCommissioning
+#      1 2023S1VLBI3mmCommissioning
+#     85 2023SequoiaCommissioning
 
 GIT_DIRS_2023 = \
 	lmtoy_2023S1RSRCommissioning \
@@ -50,7 +71,8 @@ GIT_DIRS_2024 = \
 	lmtoy_2024S1SEQUOIACommissioning \
 	lmtoy_2024-S1-DX-1 \
 	lmtoy_2024-S1-MX-2 lmtoy_2024-S1-MX-3 lmtoy_2024-S1-MX-5 \
-	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-17 lmtoy_2024-S1-MX-20 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-24 \
+	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-17 lmtoy_2024-S1-MX-18 \
+        lmtoy_2024-S1-MX-20 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-24 \
         lmtoy_2024-S1-MX-26 lmtoy_2024-S1-MX-32 lmtoy_2024-S1-MX-34 lmtoy_2024-S1-MX-35 lmtoy_2024-S1-MX-37 \
 	lmtoy_2024-S1-SP-5 lmtoy_2024-S1-SP-7 \
 	lmtoy_2024-S1-UM-1 lmtoy_2024-S1-UM-3 lmtoy_2024-S1-UM-9 lmtoy_2024-S1-UM-11 \
