@@ -15,6 +15,7 @@ url1=https://www.kryogenix.org/code/browser/sorttable/sorttable.js     # remote 
 bench1=http://taps.lmtgtm.org/lmtslr/2014ARSRCommissioning/33551/README.html
 bench2=http://taps.lmtgtm.org/lmtslr/2018S1SEQUOIACommissioning/79448/README.html
 bench3=http://taps.lmtgtm.org/lmtslr/2024S1SEQUOIACommissioning/110399/README.html
+bench5=http://taps.lmtgtm.org/lmtslr/2024S1RSRCommissioning/110670/README.html
 
 w=$(echo $WORK_LMT | cut -d/ -f5)
 
@@ -44,7 +45,7 @@ echo "Latest obsnum registered on Malt : $last_malt"
 echo "<br>"
 echo "Latest obsnum registered on Unity: $last_unity"
 echo "<br>"
-echo "LMTOY benchmarks: <A HREF=$bench1>bench1</A>, <A HREF=$bench2>bench2</A>, <A HREF=$bench3>bench3</A>"
+echo "LMTOY benchmarks: <A HREF=$bench1>bench1</A>, <A HREF=$bench2>bench2</A>, <A HREF=$bench3>bench3</A>, <A HREF=$bench5>bench5</A>"
 echo "<br>"
 echo "<A HREF=$obs>Observatory Calendar</A>"
 echo "<br>"
