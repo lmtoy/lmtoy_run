@@ -1,0 +1,26 @@
+#  <obsnum>   <comment>     # <SLpipeline args>
+# PG1402+261
+131808  Removed c/b 3/3. #badcb=3/3
+131810  Removed c/b 1/0. #badcb=1/0
+131812  Removed c/b 3/3. #badcb=3/3
+131813  [QAFAIL] inttime 0, no rms/rms0, spectra N/A. #qagrade=-2
+
+# PG1202+281 
+132046  Removed c/b 1/0,1/1. #badcb=1/0,1/2
+132047  Removed c/b 1/0,1/1. #badcb=1/0,1/2  
+
+#PG1425+267
+138021  Removed c/b 0/2,1/0. #badcb=0/2,1/0
+138022  Removed c/b 1/0. #badcb=1/0
+138024  Removed c/b 1/1,1/5. #badcb=1/2,1/4
+138025  Removed c/b 3/0.  #badcb=1/0,3/0
+138026  Removed c/b 3/0.  #badcb=1/0,3/0
+138028  Removed c/b 1/0,3/0,3/5. #badcb=1/0,3/0,3/4
+138029  Removed c/b 1/0,1/2,3/4. #badcb=1/0,1/2,3/4
+138202  Removed c/b 3/4. #badcb=3/4
+138203  Removed c/b 1/0. #badcb=1/0
+138206  Removed c/b 1/0,3/0. #badcb=1/0,3/0
+138207  Removed c/b 1/0. #badcb=1/0
+138208  Removed c/b 1/2. #badcb=1/2
+138420  Removed c/b 3/0,3/4. #badcb=3/0,3/4
+138421  Removed c/b 3/0. #badcb=3/0
