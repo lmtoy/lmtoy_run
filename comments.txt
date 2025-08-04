@@ -20,6 +20,7 @@
 2024-S1-MX-5               SEQ NGC1333 __wide vs. narrow dv=
 2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20 [completed] PI workshop
 2024-S1-MX-11              RSR [Al] J154506 strong line [completed]
+2024-S1-MX-15              SEQ new
 2024-S1-MX-17              RSR -new- HerBS-73,40
 2024-S1-MX-18              RSR -new- Virgo_Southern_Filament 
 2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   [completed]
