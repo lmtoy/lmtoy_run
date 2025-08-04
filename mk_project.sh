@@ -23,13 +23,12 @@ fi
 gh repo create --public lmtoy/lmtoy_$PID
 gh repo clone lmtoy/lmtoy_$PID
 cd lmtoy_$PID
-cp ../template/{README.md,Makefile,mk_runs.py,comments.txt} .
+cp    ../template/{README.md,Makefile,mk_runs.py,comments.txt,lmtinfo.txt} .
 echo "PID=\"$PID\"" > PID
 echo "DONE="       >> PID
 echo "ARCHIVED="   >> PID
-git add PID
-git add {README.md,Makefile,mk_runs.py,comments.txt}
-git commit -m new {README.md,Makefile,mk_runs.py,comments.txt,PID}
+git add           {README.md,Makefile,mk_runs.py,comments.txt,lmtinfo.txt,PID}
+git commit -m new {README.md,Makefile,mk_runs.py,comments.txt,lmtinfo.txt,PID}
 git push
 
 
