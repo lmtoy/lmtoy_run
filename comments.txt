@@ -17,32 +17,32 @@
 
 2024-S1-DX-1               RSR DDT project
 2024-S1-MX-2               SEQ [PT/MH] 400Mhz/nonzero VLSR  (4-mosaic) (2023-S1-UM-16) [published]
-2024-S1-MX-5               SEQ NGC1333 __wide vs. narrow dv=
-2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20 [completed] PI workshop
+2024-S1-MX-5               SEQ NGC1333 __wide vs. narrow dv= [7%]
+2024-S1-MX-3               RSR [Mo] Scuba - submitting ~jul 20 PI workshop [completed] 
 2024-S1-MX-11              RSR [Al] J154506 strong line [completed]
-2024-S1-MX-15              SEQ new Ps
-2024-S1-MX-17              RSR -new- HerBS-73,40
-2024-S1-MX-18              RSR -new- Virgo_Southern_Filament 
+2024-S1-MX-15              SEQ/Ps WR140_CO [25%]
+2024-S1-MX-17              RSR  HerBS-73,40 [25%]
+2024-S1-MX-18              RSR Virgo_Southern_Filament 
 2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   [completed]
-2024-S1-MX-22              RSR [Mo/Al] HATLAS  [completed] PI workshop
+2024-S1-MX-22              RSR [Mo/Al] HATLAS  PI workshop [completed] 
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow HC3N line [completed]
-2024-S1-MX-26              RSR [Mo/Al] 100% - nice detections   PI workshop
+2024-S1-MX-26              RSR [Mo/Al]  nice detections   PI workshop [completed]
 2024-S1-MX-30              1MM  only pointing/cal data
-2024-S1-MX-32              SEQ [Al] G38.60 not started
-2024-S1-MX-34              1MM - NGC_4449 - some signal 
-2024-S1-MX-35              SEQ [Al] TYC_2597_735_1
-2024-S1-MX-37              SEQ [Al/PT] L1157-B1 (birdies) PI workshop
+2024-S1-MX-32              SEQ [Al] G38.60 [1%]
+2024-S1-MX-34              1MM - NGC_4449 - some signal [32%]
+2024-S1-MX-35              SEQ [Al] TYC_2597_735_1 [completed]
+2024-S1-MX-37              SEQ [Al/PT] L1157-B1 (birdies) PI workshop [98%]
 2024-S1-SP-5               SEQ [Molly] NGC_4038S - submitted ~jul 20 [completed]
-2024-S1-SP-7               RSR [Al] LH85226
+2024-S1-SP-7               RSR [Al] LH85226 [64%]
 2024-S1-UM-1               SEQ [PT/MH] NGC4388 (2023-S1-UM-8) [completed]
 2024-S1-UM-3               SEQ/Ps [PT/MH] Core_41, 42, ... [completed]
 2024-S1-UM-9               RSR [Mo/Al] GoodsN   [completed]
-2024-S1-UM-11              1MM/Ps - QP183+05, PJ1138 - difficult tuning?
-2024-S1-US-3               1MM/Map - Taurus - CO(2-1) ok, lots birdies
-2024-S1-US-5               RSR [Mo/Al] C1/C2/...  [completed] PI workshop
-2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4
+2024-S1-UM-11              1MM/Ps - QP183+05, PJ1138 - difficult tuning? [61%]
+2024-S1-US-3               1MM - Taurus - CO(2-1) ok, lots birdies [completed]
+2024-S1-US-5               RSR [Mo/Al] C1/C2/... PI workshop [completed] 
+2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 [completed]
 2024-S1-US-17              RSR 20010800 [completed]
-2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic)
+2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic) [74%]
 
 #  
 2023S1RSRCommissioning     RSR [peter]
