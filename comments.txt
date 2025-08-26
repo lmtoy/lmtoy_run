@@ -23,7 +23,7 @@
 2024-S1-MX-15              SEQ/Ps WR140_CO [25%]
 2024-S1-MX-17              RSR  HerBS-73,40 (see also 2018-S1-MU-57) [25%]
 2024-S1-MX-18              RSR Virgo_Southern_Filament 
-2024-S1-MX-20              SEQ [Mo/Al] NGC4189=d, NGC5347=d, IC3392=d   [completed]
+2024-S1-MX-20              SEQ [Mo/Al] NGC4189, NGC5347, IC3392,   [completed]
 2024-S1-MX-22              RSR [Mo/Al] HATLAS  PI workshop [completed] 
 2024-S1-MX-24              SEQ [Al] Per-emb-2 - narrow HC3N line [completed]
 2024-S1-MX-26              RSR [Mo/Al]  nice detections   PI workshop [completed]
@@ -54,8 +54,8 @@
 2023-S1-MX-28  SEQ         new - 1 bank
 2023-S1-MX-40  RSR 	   [molly] detected 91GHz - V1 submited ~1-jul
 2023-S1-MX-41  RSR 	   [molly] V1 submitted (`jun?)
-2023-S1-MX-42  SEQ         [Al] IK_Tau 12CO and 13CO detected
-2023-S1-MX-46  RSR 	   [alaina] some detections - V1 2-may  V2: 18-dec [completed] PI workshop
+2023-S1-MX-42  SEQ         [Al] IK_Tau 12CO and 13CO detected [79%]
+2023-S1-MX-46  RSR 	   [alaina] some detections - V1 2-may  V2: 18-dec PI workshop [completed] 
 2023-S1-MX-47  RSR 	   [molly] strong CO lines - V1 submitted
 2023-S1-MX-49  SEQ 	   L1157-B1 (birdies 4096) - 2 banks
 2023-S1-MX-55  RSR 	   [molly] some strong continuum - V1 submitted
