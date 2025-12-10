@@ -52,7 +52,8 @@ q:
 
 check:
 	@source_obsnum.sh $(PID) > check.py
-	python check.py
+	python check.py -p
+
 new:
 	@source_obsnum.sh $(PID)
 
