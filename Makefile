@@ -69,7 +69,7 @@ GIT_DIRS_2024 = \
 	lmtoy_2024S1MSIP1mmCommissioning \
 	lmtoy_2024S1RSRCommissioning \
 	lmtoy_2024S1SEQUOIACommissioning \
-	lmtoy_2024-S1-DX-1 \
+	lmtoy_2024-S1-DX-1 lmtoy_2024-S1-DX-2 \
 	lmtoy_2024-S1-MX-2 lmtoy_2024-S1-MX-3 lmtoy_2024-S1-MX-5 \
 	lmtoy_2024-S1-MX-11 lmtoy_2024-S1-MX-15 lmtoy_2024-S1-MX-17 lmtoy_2024-S1-MX-18 \
         lmtoy_2024-S1-MX-20 lmtoy_2024-S1-MX-22 lmtoy_2024-S1-MX-24 \
