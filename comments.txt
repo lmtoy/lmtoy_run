@@ -41,7 +41,7 @@
 2024-S1-US-3               1MM - Taurus - CO(2-1) ok, lots birdies [completed]
 2024-S1-US-5               RSR [Mo/Al] C1/C2/... PI workshop [completed] 
 2024-S1-US-16              SEQ [PT/MY] A262_1,2,3,4 [completed]
-2024-S1-US-17              RSR 20010800 [completed]
+2024-S1-US-17              RSR 20010800 [Ly] [completed]
 2024-S1-US-20              SEQ [Mo/Al] G45.47 (4-mosaic) [74%]
 
 #
