@@ -130,3 +130,50 @@
 2015AGIMH132   RSR         Hansung
 2014ARSRCommissioning   RSR   bench1
 2014AYUNM044   RSR         used in a paper
+
+#     the remaining unprocessed and their obsnum count
+# 2014AAREI043         166
+# 2014ACALD019         1
+# 2014ACARA060         879
+# 2014ACHAM010         1
+# 2014ACRUI050         335
+# 2014ACYBR006         878
+# 2014AGIMH038         49
+# 2014AHUGD007         676
+# 2014AHUGD024         363
+# 2014ALEOJ042         237
+# 2014ALOPO046         103
+# 2014APOPA004         1
+# 2014APOPA034         72
+# 2014AROSD027         1043
+# 2014AROSF023         728
+# 2014ASAND003         384
+# 2014ASCHF005         301
+# 2014ASCHF035         125
+# 2014AWALW017         264
+# 2014AWANQ002         195
+# 2014AWILG016         429
+# 2014AYUNM013         782
+# 2014AYUNM015         205
+# 2014AYUNM020         1619
+# 2014AYUNM044         529
+# 2014ROSD027          68
+# 2014SAND003          30
+# 2015A2015AZAVJ138    11
+# 2015AAGUE168         171
+# 2015ABATA158         46
+# 2015ACARA136         126
+# 2015ACRUI158         219
+# 2015AGIMH132         766
+# 2015AGOMA170         367
+# 2015AHUGD143         638
+# 2015ALOWJ147         136
+# 2015APOPA133         155
+# 2015ARODC168         306
+# 2015AROSD129         1238
+# 2015AWALW154         327
+# 2015AYUNM130         489
+# 2015AYUNM144         251
+# 2015AZAVJ121         20
+# 2015AZAVJ138         58
+
