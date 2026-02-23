@@ -80,16 +80,16 @@
 2021S1MSIP1mmCommissioning 1MM one cal
 
 2021-S1-MX-3  SEQ          [peter] EDGE survey 100157-100178
-2021-S1-MX-5  SEQ  	   NGC6946
+2021-S1-MX-5  SEQ  	   NGC6946 moved
 2021-S1-MX-14 SEQ	   L1157-B1 (see also 2024-S1-MX-37)
-2021-S1-MX-26 RSR          IRAS* 
+2021-S1-MX-26 RSR          IRAS* moved
 2021-S1-MX-34 RSR          G12*,NGP*
 2021-S1-UM-1  SEQ          [MH/PT] BKP7323_CO pipeline crash
 2021-S1-UM-3  SEQ/Bs       UGCA281
 2021-S1-UM-11 RSR          J*.*
 2021-S1-US-3  SEQ          M100
-2021-S1-US-17 RSR          J1557+1540 
-2021-S1-US-19 RSR          Cyg_X-1
+2021-S1-US-17 RSR          J1557+1540 moved
+2021-S1-US-19 RSR          Cyg_X-1 moved
 
 
 #
