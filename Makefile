@@ -10,8 +10,8 @@ GIT_DIRS_2000 = \
 # old
 GIT_DIRS_OLD = lmtoy_2014AYUNM044 \
         lmtoy_2015AGIMH132 \
-        lmtoy_2014ARSRCommissioning \
-	lmtoy_2021S1RSRCommissioning \
+        lmtoy_2014ARSRCommissioning 
+
 # 2998 2015ARSRCommissioning
 # 4089 2016ARSRCommissioning
 
